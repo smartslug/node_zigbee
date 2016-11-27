@@ -1,0 +1,3119 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.3.10338/W32 for 8051        05/Aug/2016  10:43:59 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\Source\ESP\esp_data.c   /
+//    Command line       =  -f G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\ /
+//                          Projects\zstack\SE\SampleApp\CC2530DB\..\..\..\To /
+//                          ols\CC2530DB\f8wCoord.cfg (-DCPU32MHZ             /
+//                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TR /
+//                          UE -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8     /
+//                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)   /
+//                          -f G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\ /
+//                          Projects\zstack\SE\SampleApp\CC2530DB\..\..\..\To /
+//                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO           /
+//                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      /
+//                          -DDEFAULT_CHANLIST=0x02000000                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0x1688                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07, 0x09,     /
+//                          0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08,   /
+//                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100   /
+//                          -DREJOIN_POLL_RATE=440) -f                        /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\Tools /
+//                          \CC2530DB\f8wZCL.cfg (-DZCL_READ -DZCL_WRITE      /
+//                          -DZCL_BASIC -DZCL_IDENTIFY -DZCL_ON_OFF           /
+//                          -DZCL_KEY_ESTABLISH -DZCL_KEY_ESTABLISHMENT_KEY_G /
+//                          ENERATE_TIMEOUT=4 -DZCL_KEY_ESTABLISHMENT_MAC_GEN /
+//                          ERATE_TIMEOUT=10 -DZCL_KEY_ESTABLISHMENT_EKEY_GEN /
+//                          ERATE_TIMEOUT=10 -DZCL_LOAD_CONTROL               /
+//                          -DZCL_SIMPLE_METERING -DZCL_PRICING               /
+//                          -DZCL_MESSAGE -DZCL_TUNNELING -DZCL_TOU)          /
+//                          -DZCL_DEVICE_MGMT G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ /
+//                          \ZStack-2.5.1a\Projects\zstack\SE\SampleApp\Sourc /
+//                          e\ESP\esp_data.c -D TC_LINKKEY_JOIN -D ZTOOL_P1   /
+//                          -D MT_TASK -D MT_APP_FUNC -D MT_SYS_FUNC -D       /
+//                          LCD_SUPPORTED -D INT_HEAP_LEN=2450 -D NV_INIT -D  /
+//                          xNV_RESTORE -D ZCL_REPORT -D INTER_PAN -D         /
+//                          ZDSECMGR_TC_DEVICE_MAX=16 -D TEST_CERT_DATA -lC   /
+//                          "G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pr /
+//                          ojects\zstack\SE\SampleApp\CC2530DB\ESP -         /
+//                          Coordinator\List\" -lA "G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö® /
+//                          ÎÞÏßQQ\ZStack-2.5.1a\Projects\zstack\SE\SampleApp /
+//                          \CC2530DB\ESP - Coordinator\List\"                /
+//                          --diag_suppress Pe001,Pa010 -o                    /
+//                          "G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pr /
+//                          ojects\zstack\SE\SampleApp\CC2530DB\ESP -         /
+//                          Coordinator\Obj\" -e --no_code_motion --debug     /
+//                          --core=plain --dptr=16,1 --data_model=large       /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 16 -I                           /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\ -I            /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\Source\ -I  /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\Source\  /
+//                          -I G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\ /
+//                          Projects\zstack\SE\SampleApp\CC2530DB\..\..\..\ZM /
+//                          ain\TI2530DB\ -I G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ /
+//                          ZStack-2.5.1a\Projects\zstack\SE\SampleApp\CC2530 /
+//                          DB\..\..\..\..\..\Components\hal\include\ -I      /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\hal\target\CC2530EB\ -I               /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\mac\include\ -I                       /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\mac\high_level\ -I                    /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\mac\low_level\srf04\ -I               /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\mac\low_level\srf04\single_chip\ -I   /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\mt\ -I G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQ /
+//                          Q\ZStack-2.5.1a\Projects\zstack\SE\SampleApp\CC25 /
+//                          30DB\..\..\..\..\..\Components\osal\include\ -I   /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\services\saddr\ -I                    /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\services\sdata\ -I                    /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\stack\af\ -I                          /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\stack\nwk\ -I                         /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\stack\sapi\ -I                        /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\stack\sec\ -I                         /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\stack\sys\ -I                         /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\stack\zcl\ -I                         /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\stack\zdo\ -I                         /
+//                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\zmac\ -I G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏ /
+//                          ßQQ\ZStack-2.5.1a\Projects\zstack\SE\SampleApp\CC /
+//                          2530DB\..\..\..\..\..\Components\zmac\f8w\ -Ohz   /
+//                          --require_prototypes                              /
+//    List file          =  G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Pro /
+//                          jects\zstack\SE\SampleApp\CC2530DB\ESP -          /
+//                          Coordinator\List\esp_data.s51                     /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME esp_data
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC espAttrs
+        PUBLIC espCreditRemaining
+        PUBLIC espCreditStatus
+        PUBLIC espCurPartProfileIntStartTimeDelivered
+        PUBLIC espCurPartProfileIntStartTimeReceived
+        PUBLIC espCurPartProfileIntValueDelivered
+        PUBLIC espCurPartProfileIntValueReceived
+        PUBLIC espCurrentMaxDemandDelivered
+        PUBLIC espCurrentMaxDemandReceived
+        PUBLIC espCurrentSummationDelivered
+        PUBLIC espCurrentSummationReceived
+        PUBLIC espCurrentTier1SummationDelivered
+        PUBLIC espCurrentTier1SummationReceived
+        PUBLIC espCurrentTier2SummationDelivered
+        PUBLIC espCurrentTier2SummationReceived
+        PUBLIC espCurrentTier3SummationDelivered
+        PUBLIC espCurrentTier3SummationReceived
+        PUBLIC espCurrentTier4SummationDelivered
+        PUBLIC espCurrentTier4SummationReceived
+        PUBLIC espCurrentTier5SummationDelivered
+        PUBLIC espCurrentTier5SummationReceived
+        PUBLIC espCurrentTier6SummationDelivered
+        PUBLIC espCurrentTier6SummationReceived
+        PUBLIC espCurrentdayConsumptionDelivered
+        PUBLIC espCurrentdayConsumptionReceived
+        PUBLIC espDFTSummation
+        PUBLIC espDailyFreezeTime
+        PUBLIC espDateCode
+        PUBLIC espDefaultUpdatePeriod
+        PUBLIC espDelayedSuppIntValueRem
+        PUBLIC espDelayedSuppIntValueType
+        PUBLIC espDemandFormatting
+        PUBLIC espDeviceEnabled
+        PUBLIC espDivisor
+        PUBLIC espEmerCreditRemaining
+        PUBLIC espFastPollUpdatePeriod
+        PUBLIC espFuelDebtRecPeriod
+        PUBLIC espFuelDebtRecRate
+        PUBLIC espFuelDebtRem
+        PUBLIC espHWVersion
+        PUBLIC espHistoricalConsumptionFormatting
+        PUBLIC espIdentifyTime
+        PUBLIC espInClusterList
+        PUBLIC espInstanteneousDemand
+        PUBLIC espKeyEstablishmentSuite
+        PUBLIC espLastSetTime
+        PUBLIC espLocationDescription
+        PUBLIC espManufacturerName
+        PUBLIC espMaxDemandDeliverdTime
+        PUBLIC espMaxDemandReceivedTime
+        PUBLIC espMaxNumberOfPeriodsDelivered
+        PUBLIC espModelId
+        PUBLIC espMultiplier
+        PUBLIC espNonFuelDebtRecPeriod
+        PUBLIC espNonFuelDebtRecRate
+        PUBLIC espNonFuelDebtRem
+        PUBLIC espOptions
+        PUBLIC espOrigDev1
+        PUBLIC espOrigDev2
+        PUBLIC espOrigDev3
+        PUBLIC espOrigDev4
+        PUBLIC espOrigDev5
+        PUBLIC espOutClusterList
+        PUBLIC espPaymentControl
+        PUBLIC espPhysicalEnvironment
+        PUBLIC espPowerFactor
+        PUBLIC espPowerSource
+        PUBLIC espPreviousdayConsumptionDelivered
+        PUBLIC espPreviousdayConsumtpionReceived
+        PUBLIC espPropChangeImplemTime
+        PUBLIC espPropChangeProviderId
+        PUBLIC espPropChangeSupplyStatus
+        PUBLIC espSignature
+        PUBLIC espSimpleDesc
+        PUBLIC espSnapshotTime
+        PUBLIC espStartRandomizeMinutes
+        PUBLIC espStatus
+        PUBLIC espStopRandomizeMinutes
+        PUBLIC espSummationFormating
+        PUBLIC espTime
+        PUBLIC espTimeStatus
+        PUBLIC espTopUpAmount1
+        PUBLIC espTopUpAmount2
+        PUBLIC espTopUpAmount3
+        PUBLIC espTopUpAmount4
+        PUBLIC espTopUpAmount5
+        PUBLIC espTopUpDateTime1
+        PUBLIC espTopUpDateTime2
+        PUBLIC espTopUpDateTime3
+        PUBLIC espTopUpDateTime4
+        PUBLIC espTopUpDateTime5
+        PUBLIC espUnitOfMeasure
+        PUBLIC espUtilityDefinedGroup
+        PUBLIC espValidUntilTime
+        PUBLIC espZCLVersion
+// G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Projects\zstack\SE\SampleApp\Source\ESP\esp_data.c
+//    1 /**************************************************************************************************
+//    2   Filename:       esp_data.c
+//    3   Revised:        $Date: 2011-12-20 16:16:03 -0800 (Tue, 20 Dec 2011) $
+//    4   Revision:       $Revision: 28725 $
+//    5 
+//    6   Description:    File that contains attribute and simple descriptor
+//    7                   definitions for the ESP
+//    8 
+//    9 
+//   10   Copyright 2009-2011 Texas Instruments Incorporated. All rights reserved.
+//   11 
+//   12   IMPORTANT: Your use of this Software is limited to those specific rights
+//   13   granted under the terms of a software license agreement between the user
+//   14   who downloaded the software, his/her employer (which must be your employer)
+//   15   and Texas Instruments Incorporated (the "License").  You may not use this
+//   16   Software unless you agree to abide by the terms of the License. The License
+//   17   limits your use, and you acknowledge, that the Software may not be modified,
+//   18   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   19   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   20   frequency transceiver, which is integrated into your product.  Other than for
+//   21   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   22   works of, modify, distribute, perform, display or sell this Software and/or
+//   23   its documentation for any purpose.
+//   24 
+//   25   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   26   PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   27   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   28   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   29   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   30   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   31   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   32   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   33   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   34   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   35   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   36 
+//   37   Should you have any questions regarding your right to use this Software,
+//   38   contact Texas Instruments Incorporated at www.TI.com.
+//   39 **************************************************************************************************/
+//   40 
+//   41 /*********************************************************************
+//   42  * INCLUDES
+//   43  */
+//   44 #include "ZComDef.h"
+//   45 #include "OSAL_Clock.h"
+//   46 #include "ZDConfig.h"
+//   47 
+//   48 #include "se.h"
+//   49 #include "esp.h"
+//   50 #include "zcl_general.h"
+//   51 #include "zcl_se.h"
+//   52 #include "zcl_key_establish.h"
+//   53 
+//   54 /*********************************************************************
+//   55  * CONSTANTS
+//   56  */
+//   57 #define ESP_DEVICE_VERSION      0
+//   58 #define ESP_FLAGS               0
+//   59 
+//   60 #define ESP_HWVERSION           1
+//   61 #define ESP_ZCLVERSION          1
+//   62 
+//   63 /*********************************************************************
+//   64  * TYPEDEFS
+//   65  */
+//   66 
+//   67 /*********************************************************************
+//   68  * MACROS
+//   69  */
+//   70 
+//   71 /*********************************************************************
+//   72  * GLOBAL VARIABLES
+//   73  */
+//   74 // Basic Cluster
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   75 const uint8 espZCLVersion = ESP_ZCLVERSION;
+espZCLVersion:
+        DB 1
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   76 const uint8 espHWVersion = ESP_HWVERSION;
+espHWVersion:
+        DB 1
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   77 const uint8 espManufacturerName[] = { 16, 'T','e','x','a','s','I','n','s','t','r','u','m','e','n','t','s' };
+espManufacturerName:
+        DB 16
+        DB 84
+        DB 101
+        DB 120
+        DB 97
+        DB 115
+        DB 73
+        DB 110
+        DB 115
+        DB 116
+        DB 114
+        DB 117
+        DB 109
+        DB 101
+        DB 110
+        DB 116
+        DB 115
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   78 const uint8 espModelId[] = { 16, 'T','I','0','0','0','1',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
+espModelId:
+        DB 16
+        DB 84
+        DB 73
+        DB 48
+        DB 48
+        DB 48
+        DB 49
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   79 const uint8 espDateCode[] = { 16, '2','0','0','6','0','8','3','1',' ',' ',' ',' ',' ',' ',' ',' ' };
+espDateCode:
+        DB 16
+        DB 50
+        DB 48
+        DB 48
+        DB 54
+        DB 48
+        DB 56
+        DB 51
+        DB 49
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   80 const uint8 espPowerSource = POWER_SOURCE_MAINS_1_PHASE;
+espPowerSource:
+        DB 1
+//   81 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   82 uint8 espLocationDescription[] = { 16, ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
+espLocationDescription:
+        DATA8
+        DS 17
+        REQUIRE `?<Initializer for espLocationDescription>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   83 uint8 espPhysicalEnvironment = PHY_UNSPECIFIED_ENV;
+espPhysicalEnvironment:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   84 uint8 espDeviceEnabled = DEVICE_ENABLED;
+espDeviceEnabled:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for espDeviceEnabled>`
+        REQUIRE __INIT_XDATA_I
+//   85 
+//   86 // Identify Cluster Attributes
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA16
+//   87 uint16 espIdentifyTime = 0;
+espIdentifyTime:
+        DS 2
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//   88 uint32 espTime = 0;
+espTime:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   89 uint8 espTimeStatus = 0x01;
+espTimeStatus:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for espTimeStatus>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//   90 uint32 espLastSetTime;
+espLastSetTime:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//   91 uint32 espValidUntilTime;
+espValidUntilTime:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+//   92 
+//   93 // Simple Metering Cluster - Reading Information Set Attributes
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   94 uint8 espCurrentSummationDelivered[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentSummationDelivered:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentSummationDelivered`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   95 uint8 espCurrentSummationReceived[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentSummationReceived:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentSummationReceived>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   96 uint8 espCurrentMaxDemandDelivered[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentMaxDemandDelivered:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentMaxDemandDelivered`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   97 uint8 espCurrentMaxDemandReceived[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentMaxDemandReceived:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentMaxDemandReceived>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   98 uint8 espCurrentTier1SummationDelivered[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier1SummationDelivered:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier1SummationDeli`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   99 uint8 espCurrentTier1SummationReceived[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier1SummationReceived:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier1SummationRece`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  100 uint8 espCurrentTier2SummationDelivered[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier2SummationDelivered:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier2SummationDeli`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  101 uint8 espCurrentTier2SummationReceived[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier2SummationReceived:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier2SummationRece`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  102 uint8 espCurrentTier3SummationDelivered[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier3SummationDelivered:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier3SummationDeli`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  103 uint8 espCurrentTier3SummationReceived[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier3SummationReceived:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier3SummationRece`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  104 uint8 espCurrentTier4SummationDelivered[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier4SummationDelivered:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier4SummationDeli`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  105 uint8 espCurrentTier4SummationReceived[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier4SummationReceived:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier4SummationRece`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  106 uint8 espCurrentTier5SummationDelivered[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier5SummationDelivered:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier5SummationDeli`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  107 uint8 espCurrentTier5SummationReceived[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier5SummationReceived:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier5SummationRece`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  108 uint8 espCurrentTier6SummationDelivered[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier6SummationDelivered:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier6SummationDeli`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  109 uint8 espCurrentTier6SummationReceived[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espCurrentTier6SummationReceived:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espCurrentTier6SummationRece`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  110 uint8 espDFTSummation[] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espDFTSummation:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espDFTSummation>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  111 uint16 espDailyFreezeTime = 0x01;
+espDailyFreezeTime:
+        DATA16
+        DS 2
+        REQUIRE `?<Initializer for espDailyFreezeTime>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  112 int8 espPowerFactor = 0x01;
+espPowerFactor:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for espPowerFactor>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  113 UTCTime espSnapshotTime = 0x00;
+espSnapshotTime:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  114 UTCTime espMaxDemandDeliverdTime = 0x00;
+espMaxDemandDeliverdTime:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  115 UTCTime espMaxDemandReceivedTime = 0x00;
+espMaxDemandReceivedTime:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  116 uint8 espDefaultUpdatePeriod = 0x1E;
+espDefaultUpdatePeriod:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for espDefaultUpdatePeriod>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  117 uint8 espFastPollUpdatePeriod = 0x05;
+espFastPollUpdatePeriod:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for espFastPollUpdatePeriod>`
+        REQUIRE __INIT_XDATA_I
+//  118 
+//  119 // Simple Metering Cluster - Meter Status Attributes
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  120 uint8 espStatus = 0x12;
+espStatus:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for espStatus>`
+        REQUIRE __INIT_XDATA_I
+//  121 
+//  122 // Simple Metering Cluster - Formatting Attributes
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  123 uint8 espUnitOfMeasure = 0x00; // kW
+espUnitOfMeasure:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  124 uint24 espMultiplier = 0x01;
+espMultiplier:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espMultiplier>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  125 uint24 espDivisor = 0x01;
+espDivisor:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espDivisor>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  126 uint8 espSummationFormating = 0x01;
+espSummationFormating:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for espSummationFormating>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  127 uint8 espDemandFormatting = 0x01;
+espDemandFormatting:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for espDemandFormatting>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  128 uint8 espHistoricalConsumptionFormatting = 0x01;
+espHistoricalConsumptionFormatting:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for espHistoricalConsumptionForm`
+        REQUIRE __INIT_XDATA_I
+//  129 
+//  130 // Simple Metering Cluster - esp Historical Consumption Attributes
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  131 int24 espInstanteneousDemand = 0x01;
+espInstanteneousDemand:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espInstanteneousDemand>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  132 uint24 espCurrentdayConsumptionDelivered = 0x01;
+espCurrentdayConsumptionDelivered:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espCurrentdayConsumptionDeli`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  133 uint24 espCurrentdayConsumptionReceived = 0x01;
+espCurrentdayConsumptionReceived:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espCurrentdayConsumptionRece`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  134 uint24 espPreviousdayConsumptionDelivered = 0x01;
+espPreviousdayConsumptionDelivered:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espPreviousdayConsumptionDel`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  135 uint24 espPreviousdayConsumtpionReceived = 0x01;
+espPreviousdayConsumtpionReceived:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espPreviousdayConsumtpionRec`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  136 UTCTime espCurPartProfileIntStartTimeDelivered = 0x1000;
+espCurPartProfileIntStartTimeDelivered:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espCurPartProfileIntStartTim`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  137 UTCTime espCurPartProfileIntStartTimeReceived  = 0x2000;
+espCurPartProfileIntStartTimeReceived:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espCurPartProfileIntStartTim_1`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  138 uint24 espCurPartProfileIntValueDelivered = 0x0001;
+espCurPartProfileIntValueDelivered:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espCurPartProfileIntValueDel`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  139 uint24 espCurPartProfileIntValueReceived  = 0x0002;
+espCurPartProfileIntValueReceived:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for espCurPartProfileIntValueRec`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  140 uint8 espMaxNumberOfPeriodsDelivered = 0x01;
+espMaxNumberOfPeriodsDelivered:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for espMaxNumberOfPeriodsDeliver`
+        REQUIRE __INIT_XDATA_I
+//  141 
+//  142 // Demand Response and Load Control
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  143 uint8 espUtilityDefinedGroup = 0x00;
+espUtilityDefinedGroup:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  144 uint8 espStartRandomizeMinutes = 0x00;
+espStartRandomizeMinutes:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  145 uint8 espStopRandomizeMinutes = 0x00;
+espStopRandomizeMinutes:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  146 uint8 espSignature[] = {0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07,
+espSignature:
+        DATA8
+        DS 16
+        REQUIRE `?<Initializer for espSignature>`
+        REQUIRE __INIT_XDATA_I
+//  147                                   0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f};
+//  148 
+//  149 // Key Establishment
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA16
+//  150 uint16 espKeyEstablishmentSuite = CERTIFICATE_BASED_KEY_ESTABLISHMENT;
+espKeyEstablishmentSuite:
+        DS 2
+        REQUIRE __INIT_XDATA_Z
+//  151 
+//  152 // Prepayment Cluster - Prepayment Information Set Attributes
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  153 uint8 espPaymentControl = 0x00;
+espPaymentControl:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  154 int32 espCreditRemaining;
+espCreditRemaining:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  155 int32 espEmerCreditRemaining;
+espEmerCreditRemaining:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  156 uint8 espCreditStatus = 0x00;
+espCreditStatus:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  157 
+//  158 // Prepayment Cluster - Top-up Attribute Set Attributes
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  159 UTCTime espTopUpDateTime1;
+espTopUpDateTime1:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  160 uint8 espTopUpAmount1[6] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espTopUpAmount1:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espTopUpAmount1>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  161 uint8 espOrigDev1;
+espOrigDev1:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  162 UTCTime espTopUpDateTime2;
+espTopUpDateTime2:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  163 uint8 espTopUpAmount2[6] = { 0x22, 0x33, 0x44, 0x55, 0x66, 0x77 };
+espTopUpAmount2:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espTopUpAmount2>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  164 uint8 espOrigDev2;
+espOrigDev2:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  165 UTCTime espTopUpDateTime3;
+espTopUpDateTime3:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  166 uint8 espTopUpAmount3[6] = { 0x33, 0x44, 0x55, 0x66, 0x77, 0x88 };
+espTopUpAmount3:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espTopUpAmount3>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  167 uint8 espOrigDev3;
+espOrigDev3:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  168 UTCTime espTopUpDateTime4;
+espTopUpDateTime4:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  169 uint8 espTopUpAmount4[6] = { 0x44, 0x55, 0x66, 0x77, 0x88, 0x99 };
+espTopUpAmount4:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espTopUpAmount4>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  170 uint8 espOrigDev4;
+espOrigDev4:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  171 UTCTime espTopUpDateTime5;
+espTopUpDateTime5:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  172 uint8 espTopUpAmount5[6] = { 0x55, 0x66, 0x77, 0x88, 0x99, 0xAA };
+espTopUpAmount5:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espTopUpAmount5>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  173 uint8 espOrigDev5;
+espOrigDev5:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  174 
+//  175 // Prepayment Cluster - Debt Attribute Set Attributes
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  176 uint8 espFuelDebtRem[6] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 };
+espFuelDebtRem:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espFuelDebtRem>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  177 uint32 espFuelDebtRecRate;
+espFuelDebtRecRate:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  178 uint8 espFuelDebtRecPeriod;
+espFuelDebtRecPeriod:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  179 uint8 espNonFuelDebtRem[6] = { 0x22, 0x33, 0x44, 0x55, 0x66, 0x77 };
+espNonFuelDebtRem:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for espNonFuelDebtRem>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  180 uint32 espNonFuelDebtRecRate;
+espNonFuelDebtRecRate:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  181 uint8 espNonFuelDebtRecPeriod;
+espNonFuelDebtRecPeriod:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  182 
+//  183 // Prepayment Cluster - Supply Control Set Attributes
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  184 uint32 espPropChangeProviderId;
+espPropChangeProviderId:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  185 UTCTime espPropChangeImplemTime;
+espPropChangeImplemTime:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  186 uint8 espPropChangeSupplyStatus;
+espPropChangeSupplyStatus:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA16
+//  187 uint16 espDelayedSuppIntValueRem;
+espDelayedSuppIntValueRem:
+        DS 2
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  188 uint8 espDelayedSuppIntValueType;
+espDelayedSuppIntValueType:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  189 
+//  190 /*********************************************************************
+//  191  * ATTRIBUTE DEFINITIONS - Uses Cluster IDs
+//  192  */
+
+        RSEG CODE_C:CODE:REORDER:NOROOT(0)
+        DATA8
+//  193 CONST zclAttrRec_t espAttrs[ESP_MAX_ATTRIBUTES] =
+espAttrs:
+        DATA16
+        DW 0
+        DW 0
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW espZCLVersion
+        DW 0
+        DW 3
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW espHWVersion
+        DW 0
+        DW 4
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW espManufacturerName
+        DW 0
+        DW 5
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW espModelId
+        DW 0
+        DW 6
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW espDateCode
+        DW 0
+        DW 7
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW espPowerSource
+        DW 0
+        DW 16
+        DATA8
+        DB 66
+        DB 3
+        DATA16
+        DW espLocationDescription
+        DW 0
+        DW 17
+        DATA8
+        DB 48
+        DB 3
+        DATA16
+        DW espPhysicalEnvironment
+        DW 0
+        DW 18
+        DATA8
+        DB 16
+        DB 3
+        DATA16
+        DW espDeviceEnabled
+        DW 3
+        DW 0
+        DATA8
+        DB 33
+        DB 3
+        DATA16
+        DW espIdentifyTime
+        DW 10
+        DW 0
+        DATA8
+        DB 226
+        DB 3
+        DATA16
+        DW espTime
+        DW 10
+        DW 1
+        DATA8
+        DB 24
+        DB 3
+        DATA16
+        DW espTimeStatus
+        DW 10
+        DW 8
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espLastSetTime
+        DW 10
+        DW 9
+        DATA8
+        DB 226
+        DB 3
+        DATA16
+        DW espValidUntilTime
+        DW 1794
+        DW 0
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentSummationDelivered
+        DW 1794
+        DW 1
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentSummationReceived
+        DW 1794
+        DW 2
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentMaxDemandDelivered
+        DW 1794
+        DW 3
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentMaxDemandReceived
+        DW 1794
+        DW 256
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier1SummationDelivered
+        DW 1794
+        DW 257
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier1SummationReceived
+        DW 1794
+        DW 258
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier2SummationDelivered
+        DW 1794
+        DW 259
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier2SummationReceived
+        DW 1794
+        DW 260
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier3SummationDelivered
+        DW 1794
+        DW 261
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier3SummationReceived
+        DW 1794
+        DW 262
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier4SummationDelivered
+        DW 1794
+        DW 263
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier4SummationReceived
+        DW 1794
+        DW 264
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier5SummationDelivered
+        DW 1794
+        DW 265
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier5SummationReceived
+        DW 1794
+        DW 266
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier6SummationDelivered
+        DW 1794
+        DW 267
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espCurrentTier6SummationReceived
+        DW 1794
+        DW 4
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espDFTSummation
+        DW 1794
+        DW 5
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW espDailyFreezeTime
+        DW 1794
+        DW 6
+        DATA8
+        DB 40
+        DB 1
+        DATA16
+        DW espPowerFactor
+        DW 1794
+        DW 7
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espSnapshotTime
+        DW 1794
+        DW 8
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espMaxDemandDeliverdTime
+        DW 1794
+        DW 9
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espMaxDemandReceivedTime
+        DW 1794
+        DW 10
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW espDefaultUpdatePeriod
+        DW 1794
+        DW 11
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW espFastPollUpdatePeriod
+        DW 1794
+        DW 512
+        DATA8
+        DB 24
+        DB 1
+        DATA16
+        DW espStatus
+        DW 1794
+        DW 768
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW espUnitOfMeasure
+        DW 1794
+        DW 769
+        DATA8
+        DB 34
+        DB 1
+        DATA16
+        DW espMultiplier
+        DW 1794
+        DW 770
+        DATA8
+        DB 34
+        DB 1
+        DATA16
+        DW espDivisor
+        DW 1794
+        DW 771
+        DATA8
+        DB 24
+        DB 1
+        DATA16
+        DW espSummationFormating
+        DW 1794
+        DW 772
+        DATA8
+        DB 24
+        DB 1
+        DATA16
+        DW espDemandFormatting
+        DW 1794
+        DW 773
+        DATA8
+        DB 24
+        DB 1
+        DATA16
+        DW espHistoricalConsumptionFormatting
+        DW 1794
+        DW 1024
+        DATA8
+        DB 42
+        DB 1
+        DATA16
+        DW espInstanteneousDemand
+        DW 1794
+        DW 1025
+        DATA8
+        DB 34
+        DB 1
+        DATA16
+        DW espCurrentdayConsumptionDelivered
+        DW 1794
+        DW 1026
+        DATA8
+        DB 34
+        DB 1
+        DATA16
+        DW espCurrentdayConsumptionReceived
+        DW 1794
+        DW 1027
+        DATA8
+        DB 34
+        DB 1
+        DATA16
+        DW espPreviousdayConsumptionDelivered
+        DW 1794
+        DW 1028
+        DATA8
+        DB 34
+        DB 1
+        DATA16
+        DW espPreviousdayConsumtpionReceived
+        DW 1794
+        DW 1029
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espCurPartProfileIntStartTimeDelivered
+        DW 1794
+        DW 1030
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espCurPartProfileIntStartTimeReceived
+        DW 1794
+        DW 1031
+        DATA8
+        DB 34
+        DB 1
+        DATA16
+        DW espCurPartProfileIntValueDelivered
+        DW 1794
+        DW 1032
+        DATA8
+        DB 34
+        DB 1
+        DATA16
+        DW espCurPartProfileIntValueReceived
+        DW 1794
+        DW 1280
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW espMaxNumberOfPeriodsDelivered
+        DW 1793
+        DW 0
+        DATA8
+        DB 32
+        DB 3
+        DATA16
+        DW espUtilityDefinedGroup
+        DW 1793
+        DW 1
+        DATA8
+        DB 32
+        DB 3
+        DATA16
+        DW espStartRandomizeMinutes
+        DW 1793
+        DW 2
+        DATA8
+        DB 32
+        DB 3
+        DATA16
+        DW espStopRandomizeMinutes
+        DW 2048
+        DW 0
+        DATA8
+        DB 25
+        DB 1
+        DATA16
+        DW espKeyEstablishmentSuite
+        DW 1797
+        DW 0
+        DATA8
+        DB 24
+        DB 1
+        DATA16
+        DW espPaymentControl
+        DW 1797
+        DW 1
+        DATA8
+        DB 43
+        DB 1
+        DATA16
+        DW espCreditRemaining
+        DW 1797
+        DW 2
+        DATA8
+        DB 43
+        DB 1
+        DATA16
+        DW espEmerCreditRemaining
+        DW 1797
+        DW 3
+        DATA8
+        DB 24
+        DB 1
+        DATA16
+        DW espCreditStatus
+        DW 1797
+        DW 256
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espTopUpDateTime1
+        DW 1797
+        DW 257
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espTopUpAmount1
+        DW 1797
+        DW 258
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW espOrigDev1
+        DW 1797
+        DW 272
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espTopUpDateTime2
+        DW 1797
+        DW 273
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espTopUpAmount2
+        DW 1797
+        DW 274
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW espOrigDev2
+        DW 1797
+        DW 288
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espTopUpDateTime3
+        DW 1797
+        DW 289
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espTopUpAmount3
+        DW 1797
+        DW 290
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW espOrigDev3
+        DW 1797
+        DW 304
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espTopUpDateTime4
+        DW 1797
+        DW 305
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espTopUpAmount4
+        DW 1797
+        DW 306
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW espOrigDev4
+        DW 1797
+        DW 320
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espTopUpDateTime5
+        DW 1797
+        DW 321
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espTopUpAmount5
+        DW 1797
+        DW 322
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW espOrigDev5
+        DW 1797
+        DW 512
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espFuelDebtRem
+        DW 1797
+        DW 513
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW espFuelDebtRecRate
+        DW 1797
+        DW 514
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW espFuelDebtRecPeriod
+        DW 1797
+        DW 515
+        DATA8
+        DB 37
+        DB 1
+        DATA16
+        DW espNonFuelDebtRem
+        DW 1797
+        DW 516
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW espNonFuelDebtRecRate
+        DW 1797
+        DW 517
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW espNonFuelDebtRecPeriod
+        DW 1797
+        DW 768
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW espPropChangeProviderId
+        DW 1797
+        DW 769
+        DATA8
+        DB 226
+        DB 1
+        DATA16
+        DW espPropChangeImplemTime
+        DW 1797
+        DW 770
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW espPropChangeSupplyStatus
+        DW 1797
+        DW 771
+        DATA8
+        DB 33
+        DB 3
+        DATA16
+        DW espDelayedSuppIntValueRem
+        DW 1797
+        DW 772
+        DATA8
+        DB 48
+        DB 3
+        DATA16
+        DW espDelayedSuppIntValueType
+//  194 {
+//  195 
+//  196   // *** General Basic Cluster Attributes ***
+//  197   {
+//  198     ZCL_CLUSTER_ID_GEN_BASIC,             // Cluster IDs - defined in the foundation (ie. zcl.h)
+//  199     {  // Attribute record
+//  200       ATTRID_BASIC_ZCL_VERSION,           // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  201       ZCL_DATATYPE_UINT8,                 // Data Type - found in zcl.h
+//  202       ACCESS_CONTROL_READ,                // Variable access control - found in zcl.h
+//  203       (void *)&espZCLVersion              // Pointer to attribute variable
+//  204     }
+//  205   },
+//  206   {
+//  207     ZCL_CLUSTER_ID_GEN_BASIC,
+//  208     { // Attribute record
+//  209       ATTRID_BASIC_HW_VERSION,
+//  210       ZCL_DATATYPE_UINT8,
+//  211       ACCESS_CONTROL_READ,
+//  212       (void *)&espHWVersion
+//  213     }
+//  214   },
+//  215   {
+//  216     ZCL_CLUSTER_ID_GEN_BASIC,
+//  217     { // Attribute record
+//  218       ATTRID_BASIC_MANUFACTURER_NAME,
+//  219       ZCL_DATATYPE_CHAR_STR,
+//  220       ACCESS_CONTROL_READ,
+//  221       (void *)espManufacturerName
+//  222     }
+//  223   },
+//  224   {
+//  225     ZCL_CLUSTER_ID_GEN_BASIC,
+//  226     { // Attribute record
+//  227       ATTRID_BASIC_MODEL_ID,
+//  228       ZCL_DATATYPE_CHAR_STR,
+//  229       ACCESS_CONTROL_READ,
+//  230       (void *)espModelId
+//  231     }
+//  232   },
+//  233   {
+//  234     ZCL_CLUSTER_ID_GEN_BASIC,
+//  235     { // Attribute record
+//  236       ATTRID_BASIC_DATE_CODE,
+//  237       ZCL_DATATYPE_CHAR_STR,
+//  238       ACCESS_CONTROL_READ,
+//  239       (void *)espDateCode
+//  240     }
+//  241   },
+//  242   {
+//  243     ZCL_CLUSTER_ID_GEN_BASIC,
+//  244     { // Attribute record
+//  245       ATTRID_BASIC_POWER_SOURCE,
+//  246       ZCL_DATATYPE_ENUM8,
+//  247       ACCESS_CONTROL_READ,
+//  248       (void *)&espPowerSource
+//  249     }
+//  250   },
+//  251   {
+//  252     ZCL_CLUSTER_ID_GEN_BASIC,
+//  253     { // Attribute record
+//  254       ATTRID_BASIC_LOCATION_DESC,
+//  255       ZCL_DATATYPE_CHAR_STR,
+//  256       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  257       (void *)espLocationDescription
+//  258     }
+//  259   },
+//  260   {
+//  261     ZCL_CLUSTER_ID_GEN_BASIC,
+//  262     { // Attribute record
+//  263       ATTRID_BASIC_PHYSICAL_ENV,
+//  264       ZCL_DATATYPE_ENUM8,
+//  265       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  266       (void *)&espPhysicalEnvironment
+//  267     }
+//  268   },
+//  269   {
+//  270     ZCL_CLUSTER_ID_GEN_BASIC,
+//  271     { // Attribute record
+//  272       ATTRID_BASIC_DEVICE_ENABLED,
+//  273       ZCL_DATATYPE_BOOLEAN,
+//  274       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  275       (void *)&espDeviceEnabled
+//  276     }
+//  277   },
+//  278 
+//  279   // *** Identify Cluster Attribute ***
+//  280   {
+//  281     ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  282     { // Attribute record
+//  283       ATTRID_IDENTIFY_TIME,
+//  284       ZCL_DATATYPE_UINT16,
+//  285       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  286       (void *)&espIdentifyTime
+//  287     }
+//  288   },
+//  289 
+//  290   // *** Time Cluster Attribute ***
+//  291   {
+//  292     ZCL_CLUSTER_ID_GEN_TIME,
+//  293     { // Attribute record
+//  294       ATTRID_TIME_TIME,
+//  295       ZCL_DATATYPE_UTC,
+//  296       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  297       (void *)&espTime
+//  298     }
+//  299   },
+//  300   {
+//  301     ZCL_CLUSTER_ID_GEN_TIME,
+//  302     { // Attribute record
+//  303       ATTRID_TIME_STATUS,
+//  304       ZCL_DATATYPE_BITMAP8,
+//  305       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  306       (void *)&espTimeStatus
+//  307     }
+//  308   },
+//  309   {
+//  310     ZCL_CLUSTER_ID_GEN_TIME,
+//  311     { // Attribute record
+//  312       ATTRID_TIME_LAST_SET_TIME,
+//  313       ZCL_DATATYPE_UTC,
+//  314       ACCESS_CONTROL_READ,
+//  315       (void *)&espLastSetTime
+//  316     }
+//  317   },
+//  318   {
+//  319     ZCL_CLUSTER_ID_GEN_TIME,
+//  320     { // Attribute record
+//  321       ATTRID_TIME_VALID_UNTIL_TIME,
+//  322       ZCL_DATATYPE_UTC,
+//  323       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  324       (void *)&espValidUntilTime
+//  325     }
+//  326   },
+//  327 
+//  328   // SE Attributes
+//  329   {
+//  330     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,          // Cluster IDs - defined in the profile (ie. se.h)
+//  331     {  // Attribute record
+//  332       ATTRID_SE_CURRENT_SUMMATION_DELIVERED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  333       ZCL_DATATYPE_UINT48,                      // Data Type - found in zcl.h
+//  334       ACCESS_CONTROL_READ,                      // Variable access control - found in zcl.h
+//  335       (void *)espCurrentSummationDelivered      // Pointer to attribute variable
+//  336     }
+//  337   },
+//  338   {
+//  339     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,          // Cluster IDs - defined in the profile (ie. se.h)
+//  340     {  // Attribute record
+//  341       ATTRID_SE_CURRENT_SUMMATION_RECEIVED,     // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  342       ZCL_DATATYPE_UINT48,                      // Data Type - found in zcl.h
+//  343       ACCESS_CONTROL_READ,                      // Variable access control - found in zcl.h
+//  344       (void *)espCurrentSummationReceived       // Pointer to attribute variable
+//  345     }
+//  346   },
+//  347   {
+//  348     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,          // Cluster IDs - defined in the profile (ie. se.h)
+//  349     {  // Attribute record
+//  350       ATTRID_SE_CURRENT_MAX_DEMAND_DELIVERED,   // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  351       ZCL_DATATYPE_UINT48,                      // Data Type - found in zcl.h
+//  352       ACCESS_CONTROL_READ,                      // Variable access control - found in zcl.h
+//  353       (void *)espCurrentMaxDemandDelivered      // Pointer to attribute variable
+//  354     }
+//  355   },
+//  356   {
+//  357     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,          // Cluster IDs - defined in the profile (ie. se.h)
+//  358     {  // Attribute record
+//  359       ATTRID_SE_CURRENT_MAX_DEMAND_RECEIVED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  360       ZCL_DATATYPE_UINT48,                      // Data Type - found in zcl.h
+//  361       ACCESS_CONTROL_READ,                      // Variable access control - found in zcl.h
+//  362       (void *)espCurrentMaxDemandReceived       // Pointer to attribute variable
+//  363     }
+//  364   },
+//  365   {
+//  366     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,              // Cluster IDs - defined in the profile (ie. se.h)
+//  367     {  // Attribute record
+//  368       ATTRID_SE_CURRENT_TIER1_SUMMATION_DELIVERED,  // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  369       ZCL_DATATYPE_UINT48,                          // Data Type - found in zcl.h
+//  370       ACCESS_CONTROL_READ,                          // Variable access control - found in zcl.h
+//  371       (void *)espCurrentTier1SummationDelivered     // Pointer to attribute variable
+//  372     }
+//  373   },
+//  374   {
+//  375     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,              // Cluster IDs - defined in the profile (ie. se.h)
+//  376     {  // Attribute record
+//  377       ATTRID_SE_CURRENT_TIER1_SUMMATION_RECEIVED,   // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  378       ZCL_DATATYPE_UINT48,                          // Data Type - found in zcl.h
+//  379       ACCESS_CONTROL_READ,                          // Variable access control - found in zcl.h
+//  380       (void *)espCurrentTier1SummationReceived      // Pointer to attribute variable
+//  381     }
+//  382   },
+//  383   {
+//  384     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,                // Cluster IDs - defined in the profile (ie. se.h)
+//  385     {  // Attribute record
+//  386       ATTRID_SE_CURRENT_TIER2_SUMMATION_DELIVERED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  387       ZCL_DATATYPE_UINT48,                            // Data Type - found in zcl.h
+//  388       ACCESS_CONTROL_READ,                            // Variable access control - found in zcl.h
+//  389       (void *)espCurrentTier2SummationDelivered       // Pointer to attribute variable
+//  390     }
+//  391   },
+//  392   {
+//  393     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,              // Cluster IDs - defined in the profile (ie. se.h)
+//  394     {  // Attribute record
+//  395       ATTRID_SE_CURRENT_TIER2_SUMMATION_RECEIVED,   // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  396       ZCL_DATATYPE_UINT48,                          // Data Type - found in zcl.h
+//  397       ACCESS_CONTROL_READ,                          // Variable access control - found in zcl.h
+//  398       (void *)espCurrentTier2SummationReceived      // Pointer to attribute variable
+//  399     }
+//  400   },
+//  401   {
+//  402     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,                // Cluster IDs - defined in the profile (ie. se.h)
+//  403     {  // Attribute record
+//  404       ATTRID_SE_CURRENT_TIER3_SUMMATION_DELIVERED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  405       ZCL_DATATYPE_UINT48,                            // Data Type - found in zcl.h
+//  406       ACCESS_CONTROL_READ,                            // Variable access control - found in zcl.h
+//  407       (void *)espCurrentTier3SummationDelivered       // Pointer to attribute variable
+//  408     }
+//  409   },
+//  410   {
+//  411     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,               // Cluster IDs - defined in the profile (ie. se.h)
+//  412     {  // Attribute record
+//  413       ATTRID_SE_CURRENT_TIER3_SUMMATION_RECEIVED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  414       ZCL_DATATYPE_UINT48,                           // Data Type - found in zcl.h
+//  415       ACCESS_CONTROL_READ,                           // Variable access control - found in zcl.h
+//  416       (void *)espCurrentTier3SummationReceived       // Pointer to attribute variable
+//  417     }
+//  418   },
+//  419   {
+//  420     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,                // Cluster IDs - defined in the profile (ie. se.h)
+//  421     {  // Attribute record
+//  422       ATTRID_SE_CURRENT_TIER4_SUMMATION_DELIVERED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  423       ZCL_DATATYPE_UINT48,                            // Data Type - found in zcl.h
+//  424       ACCESS_CONTROL_READ,                            // Variable access control - found in zcl.h
+//  425       (void *)espCurrentTier4SummationDelivered       // Pointer to attribute variable
+//  426     }
+//  427   },
+//  428   {
+//  429     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,               // Cluster IDs - defined in the profile (ie. se.h)
+//  430     {  // Attribute record
+//  431       ATTRID_SE_CURRENT_TIER4_SUMMATION_RECEIVED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  432       ZCL_DATATYPE_UINT48,                           // Data Type - found in zcl.h
+//  433       ACCESS_CONTROL_READ,                           // Variable access control - found in zcl.h
+//  434       (void *)espCurrentTier4SummationReceived       // Pointer to attribute variable
+//  435     }
+//  436   },
+//  437   {
+//  438     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,                // Cluster IDs - defined in the profile (ie. se.h)
+//  439     {  // Attribute record
+//  440       ATTRID_SE_CURRENT_TIER5_SUMMATION_DELIVERED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  441       ZCL_DATATYPE_UINT48,                            // Data Type - found in zcl.h
+//  442       ACCESS_CONTROL_READ,                            // Variable access control - found in zcl.h
+//  443       (void *)espCurrentTier5SummationDelivered       // Pointer to attribute variable
+//  444     }
+//  445   },
+//  446   {
+//  447     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,               // Cluster IDs - defined in the profile (ie. se.h)
+//  448     {  // Attribute record
+//  449       ATTRID_SE_CURRENT_TIER5_SUMMATION_RECEIVED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  450       ZCL_DATATYPE_UINT48,                           // Data Type - found in zcl.h
+//  451       ACCESS_CONTROL_READ,                           // Variable access control - found in zcl.h
+//  452       (void *)espCurrentTier5SummationReceived       // Pointer to attribute variable
+//  453     }
+//  454   },
+//  455    {
+//  456     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,                // Cluster IDs - defined in the profile (ie. se.h)
+//  457     {  // Attribute record
+//  458       ATTRID_SE_CURRENT_TIER6_SUMMATION_DELIVERED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  459       ZCL_DATATYPE_UINT48,                            // Data Type - found in zcl.h
+//  460       ACCESS_CONTROL_READ,                            // Variable access control - found in zcl.h
+//  461       (void *)espCurrentTier6SummationDelivered       // Pointer to attribute variable
+//  462     }
+//  463   },
+//  464   {
+//  465     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,               // Cluster IDs - defined in the profile (ie. se.h)
+//  466     {  // Attribute record
+//  467       ATTRID_SE_CURRENT_TIER6_SUMMATION_RECEIVED,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  468       ZCL_DATATYPE_UINT48,                           // Data Type - found in zcl.h
+//  469       ACCESS_CONTROL_READ,                           // Variable access control - found in zcl.h
+//  470       (void *)espCurrentTier6SummationReceived       // Pointer to attribute variable
+//  471     }
+//  472   },
+//  473   {
+//  474     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,       // Cluster IDs - defined in the profile (ie. se.h)
+//  475     {  // Attribute record
+//  476       ATTRID_SE_DFT_SUMMATION,               // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  477       ZCL_DATATYPE_UINT48,                   // Data Type - found in zcl.h
+//  478       ACCESS_CONTROL_READ,                   // Variable access control - found in zcl.h
+//  479       (void *)espDFTSummation                // Pointer to attribute variable
+//  480     }
+//  481   },
+//  482   {
+//  483     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,       // Cluster IDs - defined in the profile (ie. se.h)
+//  484     {  // Attribute record
+//  485       ATTRID_SE_DAILY_FREEZE_TIME,           // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  486       ZCL_DATATYPE_UINT16,                   // Data Type - found in zcl.h
+//  487       ACCESS_CONTROL_READ,                   // Variable access control - found in zcl.h
+//  488       (void *)&espDailyFreezeTime            // Pointer to attribute variable
+//  489     }
+//  490   },
+//  491   {
+//  492     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,       // Cluster IDs - defined in the profile (ie. se.h)
+//  493     {  // Attribute record
+//  494       ATTRID_SE_POWER_FACTOR,                // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  495       ZCL_DATATYPE_INT8,                     // Data Type - found in zcl.h
+//  496       ACCESS_CONTROL_READ,                   // Variable access control - found in zcl.h
+//  497       (void *)&espPowerFactor                // Pointer to attribute variable
+//  498     }
+//  499   },
+//  500   {
+//  501     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,       // Cluster IDs - defined in the profile (ie. se.h)
+//  502     {  // Attribute record
+//  503       ATTRID_SE_READING_SNAPSHOT_TIME,       // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  504       ZCL_DATATYPE_UTC,                      // Data Type - found in zcl.h
+//  505       ACCESS_CONTROL_READ,                   // Variable access control - found in zcl.h
+//  506       (void *)&espSnapshotTime               // Pointer to attribute variable
+//  507     }
+//  508   },
+//  509   {
+//  510     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,               // Cluster IDs - defined in the profile (ie. se.h)
+//  511     {  // Attribute record
+//  512       ATTRID_SE_CURRENT_MAX_DEMAND_DELIVERD_TIME,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  513       ZCL_DATATYPE_UTC,                              // Data Type - found in zcl.h
+//  514       ACCESS_CONTROL_READ,                           // Variable access control - found in zcl.h
+//  515       (void *)&espMaxDemandDeliverdTime              // Pointer to attribute variable
+//  516     }
+//  517   },
+//  518   {
+//  519     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,               // Cluster IDs - defined in the profile (ie. se.h)
+//  520     {  // Attribute record
+//  521       ATTRID_SE_CURRENT_MAX_DEMAND_RECEIVED_TIME,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  522       ZCL_DATATYPE_UTC,                              // Data Type - found in zcl.h
+//  523       ACCESS_CONTROL_READ,                           // Variable access control - found in zcl.h
+//  524       (void *)&espMaxDemandReceivedTime              // Pointer to attribute variable
+//  525     }
+//  526   },
+//  527   {
+//  528     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,               // Cluster IDs - defined in the profile (ie. se.h)
+//  529     {  // Attribute record
+//  530       ATTRID_SE_DEFAULT_UPDATE_PERIOD,               // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  531       ZCL_DATATYPE_UINT8,                            // Data Type - found in zcl.h
+//  532       ACCESS_CONTROL_READ,                           // Variable access control - found in zcl.h
+//  533       (void *)&espDefaultUpdatePeriod                // Pointer to attribute variable
+//  534     }
+//  535   },
+//  536   {
+//  537     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,               // Cluster IDs - defined in the profile (ie. se.h)
+//  538     {  // Attribute record
+//  539       ATTRID_SE_FAST_POLL_UPDATE_PERIOD,             // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  540       ZCL_DATATYPE_UINT8,                            // Data Type - found in zcl.h
+//  541       ACCESS_CONTROL_READ,                           // Variable access control - found in zcl.h
+//  542       (void *)&espFastPollUpdatePeriod               // Pointer to attribute variable
+//  543     }
+//  544   },
+//  545   {
+//  546     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,       // Cluster IDs - defined in the profile (ie. se.h)
+//  547     {  // Attribute record
+//  548       ATTRID_SE_STATUS,                      // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  549       ZCL_DATATYPE_BITMAP8,                  // Data Type - found in zcl.h
+//  550       ACCESS_CONTROL_READ,                   // Variable access control - found in zcl.h
+//  551       (void *)&espStatus                     // Pointer to attribute variable
+//  552     }
+//  553   },
+//  554 
+//  555   {
+//  556     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,       // Cluster IDs - defined in the profile (ie. se.h)
+//  557     {  // Attribute record
+//  558       ATTRID_SE_UNIT_OF_MEASURE,             // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  559       ZCL_DATATYPE_ENUM8,                    // Data Type - found in zcl.h
+//  560       ACCESS_CONTROL_READ,                   // Variable access control - found in zcl.h
+//  561       (void *)&espUnitOfMeasure              // Pointer to attribute variable
+//  562     }
+//  563   },
+//  564   {
+//  565     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,       // Cluster IDs - defined in the profile (ie. se.h)
+//  566     {  // Attribute record
+//  567       ATTRID_SE_MULTIPLIER,                  // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  568       ZCL_DATATYPE_UINT24,                   // Data Type - found in zcl.h
+//  569       ACCESS_CONTROL_READ,                   // Variable access control - found in zcl.h
+//  570       (void *)&espMultiplier                 // Pointer to attribute variable
+//  571     }
+//  572   },
+//  573   {
+//  574     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,      // Cluster IDs - defined in the profile (ie. se.h)
+//  575     {  // Attribute record
+//  576       ATTRID_SE_DIVISOR,                    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  577       ZCL_DATATYPE_UINT24,                  // Data Type - found in zcl.h
+//  578       ACCESS_CONTROL_READ,                  // Variable access control - found in zcl.h
+//  579       (void *)&espDivisor                   // Pointer to attribute variable
+//  580     }
+//  581   },
+//  582   {
+//  583     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,      // Cluster IDs - defined in the profile (ie. se.h)
+//  584     {  // Attribute record
+//  585       ATTRID_SE_SUMMATION_FORMATTING,       // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  586       ZCL_DATATYPE_BITMAP8,                 // Data Type - found in zcl.h
+//  587       ACCESS_CONTROL_READ,                  // Variable access control - found in zcl.h
+//  588       (void *)&espSummationFormating        // Pointer to attribute variable
+//  589     }
+//  590   },
+//  591   {
+//  592     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,       // Cluster IDs - defined in the profile (ie. se.h)
+//  593     {  // Attribute record
+//  594       ATTRID_SE_DEMAND_FORMATTING,           // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  595       ZCL_DATATYPE_BITMAP8,                  // Data Type - found in zcl.h
+//  596       ACCESS_CONTROL_READ,                   // Variable access control - found in zcl.h
+//  597       (void *)&espDemandFormatting           // Pointer to attribute variable
+//  598     }
+//  599   },
+//  600   {
+//  601     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,                // Cluster IDs - defined in the profile (ie. se.h)
+//  602     {  // Attribute record
+//  603       ATTRID_SE_HISTORICAL_CONSUMPTION_FORMATTING,    // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  604       ZCL_DATATYPE_BITMAP8,                           // Data Type - found in zcl.h
+//  605       ACCESS_CONTROL_READ,                            // Variable access control - found in zcl.h
+//  606       (void *)&espHistoricalConsumptionFormatting     // Pointer to attribute variable
+//  607     }
+//  608   },
+//  609   {
+//  610     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+//  611     {  // Attribute record
+//  612       ATTRID_SE_INSTANTANEOUS_DEMAND,
+//  613       ZCL_DATATYPE_INT24,
+//  614       ACCESS_CONTROL_READ,
+//  615       (void *)&espInstanteneousDemand
+//  616     }
+//  617   },
+//  618   {
+//  619     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+//  620     {  // Attribute record
+//  621       ATTRID_SE_CURRENTDAY_CONSUMPTION_DELIVERED,
+//  622       ZCL_DATATYPE_UINT24,
+//  623       ACCESS_CONTROL_READ,
+//  624       (void *)&espCurrentdayConsumptionDelivered
+//  625     }
+//  626   },
+//  627   {
+//  628     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+//  629     {  // Attribute record
+//  630       ATTRID_SE_CURRENTDAY_CONSUMPTION_RECEIVED,
+//  631       ZCL_DATATYPE_UINT24,
+//  632       ACCESS_CONTROL_READ,
+//  633       (void *)&espCurrentdayConsumptionReceived
+//  634     }
+//  635   },
+//  636   {
+//  637     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+//  638     {  // Attribute record
+//  639       ATTRID_SE_PREVIOUSDAY_CONSUMPTION_DELIVERED,
+//  640       ZCL_DATATYPE_UINT24,
+//  641       ACCESS_CONTROL_READ,
+//  642       (void *)&espPreviousdayConsumptionDelivered
+//  643     }
+//  644   },
+//  645   {
+//  646     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+//  647     {  // Attribute record
+//  648       ATTRID_SE_PREVIOUSDAY_CONSUMPTION_RECEIVED,
+//  649       ZCL_DATATYPE_UINT24,
+//  650       ACCESS_CONTROL_READ,
+//  651       (void *)&espPreviousdayConsumtpionReceived
+//  652     }
+//  653   },
+//  654   {
+//  655     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+//  656     {  // Attribute record
+//  657       ATTRID_SE_CUR_PART_PROFILE_INT_START_TIME_DELIVERED,
+//  658       ZCL_DATATYPE_UTC,
+//  659       ACCESS_CONTROL_READ,
+//  660       (void *)&espCurPartProfileIntStartTimeDelivered
+//  661     }
+//  662   },
+//  663   {
+//  664     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+//  665     {  // Attribute record
+//  666       ATTRID_SE_CUR_PART_PROFILE_INT_START_TIME_RECEIVED,
+//  667       ZCL_DATATYPE_UTC,
+//  668       ACCESS_CONTROL_READ,
+//  669       (void *)&espCurPartProfileIntStartTimeReceived
+//  670     }
+//  671   },
+//  672   {
+//  673     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+//  674     {  // Attribute record
+//  675       ATTRID_SE_CUR_PART_PROFILE_INT_VALUE_DELIVERED,
+//  676       ZCL_DATATYPE_UINT24,
+//  677       ACCESS_CONTROL_READ,
+//  678       (void *)&espCurPartProfileIntValueDelivered
+//  679     }
+//  680   },
+//  681   {
+//  682     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+//  683     {  // Attribute record
+//  684       ATTRID_SE_CUR_PART_PROFILE_INT_VALUE_RECEIVED,
+//  685       ZCL_DATATYPE_UINT24,
+//  686       ACCESS_CONTROL_READ,
+//  687       (void *)&espCurPartProfileIntValueReceived
+//  688     }
+//  689   },
+//  690 
+//  691   {
+//  692     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+//  693     {  // Attribute record
+//  694       ATTRID_SE_MAX_NUMBER_OF_PERIODS_DELIVERED,
+//  695       ZCL_DATATYPE_UINT8,
+//  696       ACCESS_CONTROL_READ,
+//  697       (void *)&espMaxNumberOfPeriodsDelivered
+//  698     }
+//  699   },
+//  700   {
+//  701     ZCL_CLUSTER_ID_SE_LOAD_CONTROL,
+//  702     {  // Attribute record
+//  703       ATTRID_SE_UTILITY_DEFINED_GROUP,
+//  704       ZCL_DATATYPE_UINT8,
+//  705       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+//  706       (void *)&espUtilityDefinedGroup
+//  707     }
+//  708   },
+//  709   {
+//  710     ZCL_CLUSTER_ID_SE_LOAD_CONTROL,
+//  711     {  // Attribute record
+//  712       ATTRID_SE_START_RANDOMIZE_MINUTES,
+//  713       ZCL_DATATYPE_UINT8,
+//  714       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+//  715       (void *)&espStartRandomizeMinutes
+//  716     }
+//  717   },
+//  718   {
+//  719     ZCL_CLUSTER_ID_SE_LOAD_CONTROL,
+//  720     {  // Attribute record
+//  721       ATTRID_SE_STOP_RANDOMIZE_MINUTES,
+//  722       ZCL_DATATYPE_UINT8,
+//  723       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+//  724       (void *)&espStopRandomizeMinutes
+//  725     }
+//  726   },
+//  727   {
+//  728     ZCL_CLUSTER_ID_GEN_KEY_ESTABLISHMENT,
+//  729     {  // Attribute record
+//  730       ATTRID_KEY_ESTABLISH_SUITE,
+//  731       ZCL_DATATYPE_BITMAP16,
+//  732       ACCESS_CONTROL_READ,
+//  733       (void *)&espKeyEstablishmentSuite
+//  734     }
+//  735   },
+//  736   {
+//  737     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  738     {  // Attribute record
+//  739       ATTRID_SE_PAYMENT_CONTROL,
+//  740       ZCL_DATATYPE_BITMAP8,
+//  741       ACCESS_CONTROL_READ,
+//  742       (void *)&espPaymentControl
+//  743     }
+//  744   },
+//  745   {
+//  746     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  747     {  // Attribute record
+//  748       ATTRID_SE_CREDIT_REMAINING,
+//  749       ZCL_DATATYPE_INT32,
+//  750       ACCESS_CONTROL_READ,
+//  751       (void *)&espCreditRemaining
+//  752     }
+//  753   },
+//  754   {
+//  755     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  756     {  // Attribute record
+//  757       ATTRID_SE_EMERGENCY_CREDIT_REMAINING,
+//  758       ZCL_DATATYPE_INT32,
+//  759       ACCESS_CONTROL_READ,
+//  760       (void *)&espEmerCreditRemaining
+//  761     }
+//  762   },
+//  763   {
+//  764     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  765     {  // Attribute record
+//  766       ATTRID_SE_CREDIT_STATUS,
+//  767       ZCL_DATATYPE_BITMAP8,
+//  768       ACCESS_CONTROL_READ,
+//  769       (void *)&espCreditStatus
+//  770     }
+//  771   },
+//  772   {
+//  773     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  774     {  // Attribute record
+//  775       ATTRID_SE_TOPUP_DATE_TIME_1,
+//  776       ZCL_DATATYPE_UTC,
+//  777       ACCESS_CONTROL_READ,
+//  778       (void *)&espTopUpDateTime1
+//  779     }
+//  780   },
+//  781   {
+//  782     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  783     {  // Attribute record
+//  784       ATTRID_SE_TOPUP_AMOUNT_1,
+//  785       ZCL_DATATYPE_UINT48,
+//  786       ACCESS_CONTROL_READ,
+//  787       (void *)&espTopUpAmount1
+//  788     }
+//  789   },
+//  790   {
+//  791     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  792     {  // Attribute record
+//  793       ATTRID_SE_ORIGINATING_DEVICE_1,
+//  794       ZCL_DATATYPE_ENUM8,
+//  795       ACCESS_CONTROL_READ,
+//  796       (void *)&espOrigDev1
+//  797     }
+//  798   },
+//  799   {
+//  800     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  801     {  // Attribute record
+//  802       ATTRID_SE_TOPUP_DATE_TIME_2,
+//  803       ZCL_DATATYPE_UTC,
+//  804       ACCESS_CONTROL_READ,
+//  805       (void *)&espTopUpDateTime2
+//  806     }
+//  807   },
+//  808   {
+//  809     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  810     {  // Attribute record
+//  811       ATTRID_SE_TOPUP_AMOUNT_2,
+//  812       ZCL_DATATYPE_UINT48,
+//  813       ACCESS_CONTROL_READ,
+//  814       (void *)&espTopUpAmount2
+//  815     }
+//  816   },
+//  817   {
+//  818     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  819     {  // Attribute record
+//  820       ATTRID_SE_ORIGINATING_DEVICE_2,
+//  821       ZCL_DATATYPE_ENUM8,
+//  822       ACCESS_CONTROL_READ,
+//  823       (void *)&espOrigDev2
+//  824     }
+//  825   },
+//  826   {
+//  827     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  828     {  // Attribute record
+//  829       ATTRID_SE_TOPUP_DATE_TIME_3,
+//  830       ZCL_DATATYPE_UTC,
+//  831       ACCESS_CONTROL_READ,
+//  832       (void *)&espTopUpDateTime3
+//  833     }
+//  834   },
+//  835   {
+//  836     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  837     {  // Attribute record
+//  838       ATTRID_SE_TOPUP_AMOUNT_3,
+//  839       ZCL_DATATYPE_UINT48,
+//  840       ACCESS_CONTROL_READ,
+//  841       (void *)&espTopUpAmount3
+//  842     }
+//  843   },
+//  844   {
+//  845     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  846     {  // Attribute record
+//  847       ATTRID_SE_ORIGINATING_DEVICE_3,
+//  848       ZCL_DATATYPE_ENUM8,
+//  849       ACCESS_CONTROL_READ,
+//  850       (void *)&espOrigDev3
+//  851     }
+//  852   },
+//  853   {
+//  854     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  855     {  // Attribute record
+//  856       ATTRID_SE_TOPUP_DATE_TIME_4,
+//  857       ZCL_DATATYPE_UTC,
+//  858       ACCESS_CONTROL_READ,
+//  859       (void *)&espTopUpDateTime4
+//  860     }
+//  861   },
+//  862   {
+//  863     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  864     {  // Attribute record
+//  865       ATTRID_SE_TOPUP_AMOUNT_4,
+//  866       ZCL_DATATYPE_UINT48,
+//  867       ACCESS_CONTROL_READ,
+//  868       (void *)&espTopUpAmount4
+//  869     }
+//  870   },
+//  871   {
+//  872     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  873     {  // Attribute record
+//  874       ATTRID_SE_ORIGINATING_DEVICE_4,
+//  875       ZCL_DATATYPE_ENUM8,
+//  876       ACCESS_CONTROL_READ,
+//  877       (void *)&espOrigDev4
+//  878     }
+//  879   },
+//  880   {
+//  881     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  882     {  // Attribute record
+//  883       ATTRID_SE_TOPUP_DATE_TIME_5,
+//  884       ZCL_DATATYPE_UTC,
+//  885       ACCESS_CONTROL_READ,
+//  886       (void *)&espTopUpDateTime5
+//  887     }
+//  888   },
+//  889   {
+//  890     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  891     {  // Attribute record
+//  892       ATTRID_SE_TOPUP_AMOUNT_5,
+//  893       ZCL_DATATYPE_UINT48,
+//  894       ACCESS_CONTROL_READ,
+//  895       (void *)&espTopUpAmount5
+//  896     }
+//  897   },
+//  898   {
+//  899     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  900     {  // Attribute record
+//  901       ATTRID_SE_ORIGINATING_DEVICE_5,
+//  902       ZCL_DATATYPE_ENUM8,
+//  903       ACCESS_CONTROL_READ,
+//  904       (void *)&espOrigDev5
+//  905     }
+//  906   },
+//  907   {
+//  908     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  909     {  // Attribute record
+//  910       ATTRID_SE_FUEL_DEBT_REMAINING,
+//  911       ZCL_DATATYPE_UINT48,
+//  912       ACCESS_CONTROL_READ,
+//  913       (void *)&espFuelDebtRem
+//  914     }
+//  915   },
+//  916   {
+//  917     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  918     {  // Attribute record
+//  919       ATTRID_SE_FUEL_DEBT_RECOVERY_RATE,
+//  920       ZCL_DATATYPE_UINT32,
+//  921       ACCESS_CONTROL_READ,
+//  922       (void *)&espFuelDebtRecRate
+//  923     }
+//  924   },
+//  925   {
+//  926     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  927     {  // Attribute record
+//  928       ATTRID_SE_FUEL_DEBT_RECOVERY_PERIOD,
+//  929       ZCL_DATATYPE_ENUM8,
+//  930       ACCESS_CONTROL_READ,
+//  931       (void *)&espFuelDebtRecPeriod
+//  932     }
+//  933   },
+//  934   {
+//  935     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  936     {  // Attribute record
+//  937       ATTRID_SE_NON_FUEL_DEBT_REMAINING,
+//  938       ZCL_DATATYPE_UINT48,
+//  939       ACCESS_CONTROL_READ,
+//  940       (void *)&espNonFuelDebtRem
+//  941     }
+//  942   },
+//  943   {
+//  944     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  945     {  // Attribute record
+//  946       ATTRID_SE_NON_FUEL_DEBT_RECOVERY_RATE,
+//  947       ZCL_DATATYPE_UINT32,
+//  948       ACCESS_CONTROL_READ,
+//  949       (void *)&espNonFuelDebtRecRate
+//  950     }
+//  951   },
+//  952   {
+//  953     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  954     {  // Attribute record
+//  955       ATTRID_SE_NON_FUEL_DEBT_RECOVERY_PERIOD,
+//  956       ZCL_DATATYPE_ENUM8,
+//  957       ACCESS_CONTROL_READ,
+//  958       (void *)&espNonFuelDebtRecPeriod
+//  959     }
+//  960   },
+//  961 #ifndef SE_UK_EXT   // SE 1.1
+//  962   {
+//  963     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  964     {  // Attribute record
+//  965       ATTRID_SE_PROPOSED_CHANGE_PROVIDER_ID,
+//  966       ZCL_DATATYPE_UINT32,
+//  967       ACCESS_CONTROL_READ,
+//  968       (void *)&espPropChangeProviderId
+//  969     }
+//  970   },
+//  971   {
+//  972     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  973     {  // Attribute record
+//  974       ATTRID_SE_PROPOSED_CHANGE_IMPLEMENTATION_TIME,
+//  975       ZCL_DATATYPE_UTC,
+//  976       ACCESS_CONTROL_READ,
+//  977       (void *)&espPropChangeImplemTime
+//  978     }
+//  979   },
+//  980   {
+//  981     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  982     {  // Attribute record
+//  983       ATTRID_SE_PROPOSED_CHANGE_SUPPLY_STATUS,
+//  984       ZCL_DATATYPE_ENUM8,
+//  985       ACCESS_CONTROL_READ,
+//  986       (void *)&espPropChangeSupplyStatus
+//  987     }
+//  988   },
+//  989   {
+//  990     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+//  991     {  // Attribute record
+//  992       ATTRID_SE_DELAYED_SUPPLY_INTERRUPT_VALUE_REMAINING,
+//  993       ZCL_DATATYPE_UINT16,
+//  994       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+//  995       (void *)&espDelayedSuppIntValueRem
+//  996     }
+//  997   },
+//  998   {
+//  999     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+// 1000     {  // Attribute record
+// 1001       ATTRID_SE_DELAYED_SUPPLY_INTERRUPT_VALUE_TYPE,
+// 1002       ZCL_DATATYPE_ENUM8,
+// 1003       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+// 1004       (void *)&espDelayedSuppIntValueType
+// 1005     }
+// 1006   }
+// 1007 #endif  // SE_UK_EXT
+// 1008 };
+// 1009 
+// 1010 /*********************************************************************
+// 1011  * CLUSTER OPTION DEFINITIONS
+// 1012  */
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+// 1013 zclOptionRec_t espOptions[ESP_MAX_OPTIONS] =
+espOptions:
+        DATA8
+        DS 21
+        REQUIRE `?<Initializer for espOptions>`
+        REQUIRE __INIT_XDATA_I
+// 1014 {
+// 1015   // *** General Cluster Options ***
+// 1016   {
+// 1017     ZCL_CLUSTER_ID_GEN_TIME,                     // Cluster IDs - defined in the foundation (ie. zcl.h)
+// 1018     ( AF_EN_SECURITY /*| AF_ACK_REQUEST*/ ),     // Options - Found in AF header (ie. AF.h)
+// 1019   },
+// 1020 
+// 1021   // *** Smart Energy Cluster Options ***
+// 1022   {
+// 1023     ZCL_CLUSTER_ID_SE_PRICING,
+// 1024     ( AF_EN_SECURITY ),
+// 1025   },
+// 1026   {
+// 1027     ZCL_CLUSTER_ID_SE_LOAD_CONTROL,
+// 1028     ( AF_EN_SECURITY ),
+// 1029   },
+// 1030   {
+// 1031     ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+// 1032     ( AF_EN_SECURITY ),
+// 1033   },
+// 1034   {
+// 1035     ZCL_CLUSTER_ID_SE_MESSAGE,
+// 1036     ( AF_EN_SECURITY ),
+// 1037   },
+// 1038   {
+// 1039     ZCL_CLUSTER_ID_SE_SE_TUNNELING,
+// 1040     ( AF_EN_SECURITY ),
+// 1041   },
+// 1042   {
+// 1043     ZCL_CLUSTER_ID_SE_PREPAYMENT,
+// 1044     ( AF_EN_SECURITY ),
+// 1045   },
+// 1046 };
+// 1047 
+// 1048 /*********************************************************************
+// 1049  * SIMPLE DESCRIPTOR
+// 1050  */
+// 1051 // This is the Cluster ID List and should be filled with Application
+// 1052 // specific cluster IDs.
+// 1053 #define ESP_MAX_INCLUSTERS       8
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+// 1054 const cId_t espInClusterList[ESP_MAX_INCLUSTERS] =
+espInClusterList:
+        DATA16
+        DW 0
+        DW 3
+        DW 10
+        DW 1792
+        DW 1793
+        DW 1794
+        DW 1795
+        DW 1797
+// 1055 {
+// 1056   ZCL_CLUSTER_ID_GEN_BASIC,
+// 1057   ZCL_CLUSTER_ID_GEN_IDENTIFY,
+// 1058   ZCL_CLUSTER_ID_GEN_TIME,
+// 1059   ZCL_CLUSTER_ID_SE_PRICING,
+// 1060   ZCL_CLUSTER_ID_SE_LOAD_CONTROL,
+// 1061   ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+// 1062   ZCL_CLUSTER_ID_SE_MESSAGE,
+// 1063   ZCL_CLUSTER_ID_SE_PREPAYMENT
+// 1064 };
+// 1065 
+// 1066 #define ESP_MAX_OUTCLUSTERS       8
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+// 1067 const cId_t espOutClusterList[ESP_MAX_OUTCLUSTERS] =
+espOutClusterList:
+        DATA16
+        DW 0
+        DW 3
+        DW 10
+        DW 1792
+        DW 1793
+        DW 1794
+        DW 1795
+        DW 1797
+// 1068 {
+// 1069   ZCL_CLUSTER_ID_GEN_BASIC,
+// 1070   ZCL_CLUSTER_ID_GEN_IDENTIFY,
+// 1071   ZCL_CLUSTER_ID_GEN_TIME,
+// 1072   ZCL_CLUSTER_ID_SE_PRICING,
+// 1073   ZCL_CLUSTER_ID_SE_LOAD_CONTROL,
+// 1074   ZCL_CLUSTER_ID_SE_SIMPLE_METERING,
+// 1075   ZCL_CLUSTER_ID_SE_MESSAGE,
+// 1076   ZCL_CLUSTER_ID_SE_PREPAYMENT
+// 1077 };
+// 1078 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+// 1079 SimpleDescriptionFormat_t espSimpleDesc =
+espSimpleDesc:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for espSimpleDesc>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espLocationDescription>`:
+        DATA8
+        DB 16
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espDeviceEnabled>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espTimeStatus>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentSummationDelivered`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentSummationReceived>`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentMaxDemandDelivered`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentMaxDemandReceived>`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier1SummationDeli`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier1SummationRece`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier2SummationDeli`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier2SummationRece`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier3SummationDeli`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier3SummationRece`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier4SummationDeli`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier4SummationRece`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier5SummationDeli`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier5SummationRece`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier6SummationDeli`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentTier6SummationRece`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espDFTSummation>`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espDailyFreezeTime>`:
+        DATA16
+        DW 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espPowerFactor>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espDefaultUpdatePeriod>`:
+        DATA8
+        DB 30
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espFastPollUpdatePeriod>`:
+        DATA8
+        DB 5
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espStatus>`:
+        DATA8
+        DB 18
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espMultiplier>`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espDivisor>`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espSummationFormating>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espDemandFormatting>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espHistoricalConsumptionForm`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espInstanteneousDemand>`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentdayConsumptionDeli`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurrentdayConsumptionRece`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espPreviousdayConsumptionDel`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espPreviousdayConsumtpionRec`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurPartProfileIntStartTim`:
+        DATA32
+        DD 4096
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurPartProfileIntStartTim_1`:
+        DATA32
+        DD 8192
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurPartProfileIntValueDel`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espCurPartProfileIntValueRec`:
+        DATA32
+        DD 2
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espMaxNumberOfPeriodsDeliver`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espSignature>`:
+        DATA8
+        DB 0
+        DB 1
+        DB 2
+        DB 3
+        DB 4
+        DB 5
+        DB 6
+        DB 7
+        DB 8
+        DB 9
+        DB 10
+        DB 11
+        DB 12
+        DB 13
+        DB 14
+        DB 15
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espTopUpAmount1>`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espTopUpAmount2>`:
+        DATA8
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+        DB 119
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espTopUpAmount3>`:
+        DATA8
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+        DB 119
+        DB 136
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espTopUpAmount4>`:
+        DATA8
+        DB 68
+        DB 85
+        DB 102
+        DB 119
+        DB 136
+        DB 153
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espTopUpAmount5>`:
+        DATA8
+        DB 85
+        DB 102
+        DB 119
+        DB 136
+        DB 153
+        DB 170
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espFuelDebtRem>`:
+        DATA8
+        DB 17
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espNonFuelDebtRem>`:
+        DATA8
+        DB 34
+        DB 51
+        DB 68
+        DB 85
+        DB 102
+        DB 119
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espOptions>`:
+        DATA16
+        DW 10
+        DATA8
+        DB 64
+        DATA16
+        DW 1792
+        DATA8
+        DB 64
+        DATA16
+        DW 1793
+        DATA8
+        DB 64
+        DATA16
+        DW 1794
+        DATA8
+        DB 64
+        DATA16
+        DW 1795
+        DATA8
+        DB 64
+        DATA16
+        DW 1796
+        DATA8
+        DB 64
+        DATA16
+        DW 1797
+        DATA8
+        DB 64
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for espSimpleDesc>`:
+        DATA8
+        DB 9
+        DATA16
+        DW 265
+        DW 1280
+        DATA8
+        DB 0
+        DB 8
+        DATA16
+        DW espInClusterList
+        DATA8
+        DB 8
+        DATA16
+        DW espOutClusterList
+
+        END
+// 1080 {
+// 1081   ESP_ENDPOINT,                   //  uint8 Endpoint;
+// 1082   ZCL_SE_PROFILE_ID,              //  uint16 AppProfId[2];
+// 1083   ZCL_SE_DEVICEID_ESP,            //  uint16 AppDeviceId[2];
+// 1084   ESP_DEVICE_VERSION,             //  int   AppDevVer:4;
+// 1085   ESP_FLAGS,                      //  int   AppFlags:4;
+// 1086   ESP_MAX_INCLUSTERS,             //  uint8  AppNumInClusters;
+// 1087   (cId_t *)espInClusterList,      //  cId_t *pAppInClusterList;
+// 1088   ESP_MAX_OUTCLUSTERS,            //  uint8  AppNumInClusters;
+// 1089   (cId_t *)espOutClusterList      //  cId_t *pAppInClusterList;
+// 1090 };
+// 1091 
+// 1092 /*********************************************************************
+// 1093  * GLOBAL FUNCTIONS
+// 1094  */
+// 1095 
+// 1096 /*********************************************************************
+// 1097  * LOCAL FUNCTIONS
+// 1098  */
+// 1099 
+// 1100 /****************************************************************************
+// 1101 ****************************************************************************/
+// 1102 
+// 1103 
+// 
+// 712 bytes in segment CODE_C
+// 266 bytes in segment XDATA_I
+// 266 bytes in segment XDATA_ID
+//  86 bytes in segment XDATA_ROM_C
+//  90 bytes in segment XDATA_Z
+// 
+// 978 bytes of CODE  memory
+//  86 bytes of CONST memory
+// 356 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none

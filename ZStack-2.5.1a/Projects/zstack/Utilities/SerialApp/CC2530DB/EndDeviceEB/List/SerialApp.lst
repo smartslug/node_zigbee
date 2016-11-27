@@ -1,0 +1,1826 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         07/Aug/2016  00:24:54 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\Source\SerialApp.c #
+#    Command line       =  -f G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\P #
+#                          rojects\zstack\Utilities\SerialApp\CC2530DB\..\..\ #
+#                          ..\Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ         #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO          #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x02000000                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0x1688                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞ #
+#                          ÏßQQ\ZStack-2.5.1a\Projects\zstack\Utilities\Seria #
+#                          lApp\Source\SerialApp.c -D NWK_AUTO_POLL -D        #
+#                          HAL_UART=TRUE -D SERIAL_APP_PORT=0 -D              #
+#                          LCD_SUPPORTED -D xPOWER_SAVING -lC                 #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\EndDevice #
+#                          EB\List\ -lA G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStac #
+#                          k-2.5.1a\Projects\zstack\Utilities\SerialApp\CC253 #
+#                          0DB\EndDeviceEB\List\ --diag_suppress Pe001,Pa010  #
+#                          -o G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\P #
+#                          rojects\zstack\Utilities\SerialApp\CC2530DB\EndDev #
+#                          iceEB\Obj\ -e --no_code_motion --debug             #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®Î #
+#                          ÞÏßQQ\ZStack-2.5.1a\Projects\zstack\Utilities\Seri #
+#                          alApp\CC2530DB\ -I G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ #
+#                          \ZStack-2.5.1a\Projects\zstack\Utilities\SerialApp #
+#                          \CC2530DB\..\Source\ -I G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®Î #
+#                          ÞÏßQQ\ZStack-2.5.1a\Projects\zstack\Utilities\Seri #
+#                          alApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I         #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\hal\include\ -I                   #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\hal\target\CC2530EB\ -I           #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\mac\include\ -I                   #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\mac\high_level\ -I                #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\mac\low_level\srf04\ -I           #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\mac\low_level\srf04\single_chip\  #
+#                          -I G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\P #
+#                          rojects\zstack\Utilities\SerialApp\CC2530DB\..\..\ #
+#                          ..\..\..\Components\mt\ -I                         #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\osal\include\ -I                  #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\services\saddr\ -I                #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\services\sdata\ -I                #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\stack\af\ -I                      #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\stack\nwk\ -I                     #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\stack\sapi\ -I                    #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\stack\sec\ -I                     #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\stack\sys\ -I                     #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\stack\zdo\ -I                     #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\zmac\ -I                          #
+#                          G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\zmac\f8w\ -Ohz                    #
+#                          --require_prototypes                               #
+#    List file          =  G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\EndDevice #
+#                          EB\List\SerialApp.lst                              #
+#    Object file        =  G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Utilities\SerialApp\CC2530DB\EndDevice #
+#                          EB\Obj\SerialApp.r51                               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+G:\»ªÖÚÎÞÏß\12.´®¿ÚÍ¸´«Ö®ÎÞÏßQQ\ZStack-2.5.1a\Projects\zstack\Utilities\SerialApp\Source\SerialApp.c
+      1          /*********************************************************************
+      2           * INCLUDES
+      3           */
+      4          
+      5          #include <stdio.h>
+      6          #include <string.h>
+      7          #include "AF.h"
+      8          #include "OnBoard.h"
+      9          #include "OSAL_Tasks.h"
+     10          #include "SerialApp.h"
+     11          #include "ZDApp.h"
+     12          #include "ZDObject.h"
+     13          #include "ZDProfile.h"
+     14          
+     15          #include "hal_drivers.h"
+     16          #include "hal_key.h"
+     17          #if defined ( LCD_SUPPORTED )
+     18            #include "hal_lcd.h"
+     19          #endif
+     20          #include "hal_led.h"
+     21          #include "hal_uart.h"
+     22          
+     23          
+     24          #if !defined( SERIAL_APP_PORT )
+     25          #define SERIAL_APP_PORT  0
+     26          #endif
+     27          
+     28          #if !defined( SERIAL_APP_BAUD )
+     29            //#define SERIAL_APP_BAUD  HAL_UART_BR_38400
+     30            #define SERIAL_APP_BAUD  HAL_UART_BR_115200
+     31          #endif
+     32          
+     33          // When the Rx buf space is less than this threshold, invoke the Rx callback.
+     34          #if !defined( SERIAL_APP_THRESH )
+     35          #define SERIAL_APP_THRESH  64
+     36          #endif
+     37          
+     38          #if !defined( SERIAL_APP_RX_SZ )
+     39          #define SERIAL_APP_RX_SZ  128
+     40          #endif
+     41          
+     42          #if !defined( SERIAL_APP_TX_SZ )
+     43          #define SERIAL_APP_TX_SZ  128
+     44          #endif
+     45          
+     46          // Millisecs of idle time after a byte is received before invoking Rx callback.
+     47          #if !defined( SERIAL_APP_IDLE )
+     48          #define SERIAL_APP_IDLE  6
+     49          #endif
+     50          
+     51          // Loopback Rx bytes to Tx for throughput testing.
+     52          #if !defined( SERIAL_APP_LOOPBACK )
+     53          #define SERIAL_APP_LOOPBACK  FALSE
+     54          #endif
+     55          
+     56          // This is the max byte count per OTA message.
+     57          #if !defined( SERIAL_APP_TX_MAX )
+     58          #define SERIAL_APP_TX_MAX  80
+     59          #endif
+     60          
+     61          #define SERIAL_APP_RSP_CNT  4
+     62          
+     63          // This list should be filled with Application specific Cluster IDs.
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     64          const cId_t SerialApp_ClusterList[SERIALAPP_MAX_CLUSTERS] =
+   \                     SerialApp_ClusterList:
+   \   000000   0100         DW 1
+   \   000002   0200         DW 2
+   \   000004   0300         DW 3
+   \   000006   0400         DW 4
+     65          {
+     66            SERIALAPP_CLUSTERID1,
+     67            SERIALAPP_CLUSTERID2,
+     68            SERIALAPP_CONNECTREQ_CLUSTER,            
+     69            SERIALAPP_CONNECTRSP_CLUSTER             
+     70          };
+     71          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     72          const SimpleDescriptionFormat_t SerialApp_SimpleDesc =
+   \                     SerialApp_SimpleDesc:
+   \   000000   0B           DB 11
+   \   000001   050F         DW 3845
+   \   000003   0100         DW 1
+   \   000005   00           DB 0
+   \   000006   04           DB 4
+   \   000007   ....         DW SerialApp_ClusterList
+   \   000009   04           DB 4
+   \   00000A   ....         DW SerialApp_ClusterList
+     73          {
+     74            SERIALAPP_ENDPOINT,              //  int   Endpoint;
+     75            SERIALAPP_PROFID,                //  uint16 AppProfId[2];
+     76            SERIALAPP_DEVICEID,              //  uint16 AppDeviceId[2];
+     77            SERIALAPP_DEVICE_VERSION,        //  int   AppDevVer:4;
+     78            SERIALAPP_FLAGS,                 //  int   AppFlags:4;
+     79            SERIALAPP_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+     80            (cId_t *)SerialApp_ClusterList,  //  byte *pAppInClusterList;
+     81            SERIALAPP_MAX_CLUSTERS,          //  byte  AppNumOutClusters;
+     82            (cId_t *)SerialApp_ClusterList   //  byte *pAppOutClusterList;
+     83          };
+     84          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     85          endPointDesc_t SerialApp_epDesc =
+   \                     SerialApp_epDesc:
+   \   000000                DS 6
+   \   000006                REQUIRE `?<Initializer for SerialApp_epDesc>`
+   \   000006                REQUIRE __INIT_XDATA_I
+     86          {
+     87            SERIALAPP_ENDPOINT,
+     88           &SerialApp_TaskID,
+     89            (SimpleDescriptionFormat_t *)&SerialApp_SimpleDesc,
+     90            noLatencyReqs
+     91          };
+     92          
+     93          /*********************************************************************
+     94           * TYPEDEFS
+     95           */
+     96          
+     97          /*********************************************************************
+     98           * GLOBAL VARIABLES
+     99           */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    100          devStates_t SampleApp_NwkState;   
+   \                     SampleApp_NwkState:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    101          uint8 SerialApp_TaskID;           // Task ID for internal task/event processing.
+   \                     SerialApp_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    102          uint8 AppTitle[] = "ALD2530 DTU"; //Ó¦ÓÃ³ÌÐòÃû³Æ
+   \                     AppTitle:
+   \   000000                DS 12
+   \   00000C                REQUIRE `?<Initializer for AppTitle>`
+   \   00000C                REQUIRE __INIT_XDATA_I
+    103          /*********************************************************************
+    104           * EXTERNAL VARIABLES
+    105           */
+    106          
+    107          /*********************************************************************
+    108           * EXTERNAL FUNCTIONS
+    109           */
+    110          
+    111          /*********************************************************************
+    112           * LOCAL VARIABLES
+    113           */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    114          static uint8 SerialApp_MsgID;
+   \                     SerialApp_MsgID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    115          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    116          static afAddrType_t SerialApp_TxAddr;
+   \                     SerialApp_TxAddr:
+   \   000000                DS 12
+   \   00000C                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    117          static uint8 SerialApp_TxSeq;
+   \                     SerialApp_TxSeq:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    118          static uint8 SerialApp_TxBuf[SERIAL_APP_TX_MAX+1];
+   \                     SerialApp_TxBuf:
+   \   000000                DS 81
+   \   000051                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    119          static uint8 SerialApp_TxLen;
+   \                     SerialApp_TxLen:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    120          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    121          static afAddrType_t SerialApp_RxAddr;
+   \                     SerialApp_RxAddr:
+   \   000000                DS 12
+   \   00000C                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    122          static uint8 SerialApp_RxSeq;
+   \                     SerialApp_RxSeq:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    123          static uint8 SerialApp_RspBuf[SERIAL_APP_RSP_CNT];
+   \                     SerialApp_RspBuf:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+    124          
+    125          /*********************************************************************
+    126           * LOCAL FUNCTIONS
+    127           */
+    128          
+    129          static void SerialApp_ProcessMSGCmd( afIncomingMSGPacket_t *pkt );
+    130          static void SerialApp_Send(void);
+    131          static void SerialApp_Resp(void);
+    132          static void SerialApp_CallBack(uint8 port, uint8 event); 
+    133          static void SerialApp_DeviceConnect(void);              
+    134          static void SerialApp_DeviceConnectRsp(uint8*);         
+    135          static void SerialApp_ConnectReqProcess(uint8*);           
+    136          
+    137          /*********************************************************************
+    138           * @fn      SerialApp_Init
+    139           *
+    140           * @brief   This is called during OSAL tasks' initialization.
+    141           *
+    142           * @param   task_id - the Task ID assigned by OSAL.
+    143           *
+    144           * @return  none
+    145           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    146          void SerialApp_Init( uint8 task_id )
+   \                     SerialApp_Init:
+    147          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 29
+   \   000005   74E3         MOV     A,#-0x1d
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   E9           MOV     A,R1
+   \   00000B   FE           MOV     R6,A
+    148            halUARTCfg_t uartConfig;
+    149          
+    150            SerialApp_TaskID = task_id;
+   \   00000C   90....       MOV     DPTR,#SerialApp_TaskID
+   \   00000F   F0           MOVX    @DPTR,A
+    151            SerialApp_RxSeq = 0xC3;
+   \   000010   90....       MOV     DPTR,#SerialApp_RxSeq
+   \   000013   74C3         MOV     A,#-0x3d
+   \   000015   F0           MOVX    @DPTR,A
+    152            SampleApp_NwkState = DEV_INIT;       
+   \   000016   90....       MOV     DPTR,#SampleApp_NwkState
+   \   000019   7401         MOV     A,#0x1
+   \   00001B   F0           MOVX    @DPTR,A
+    153            
+    154            afRegister( (endPointDesc_t *)&SerialApp_epDesc );
+   \   00001C                ; Setup parameters for call to function afRegister
+   \   00001C   7A..         MOV     R2,#SerialApp_epDesc & 0xff
+   \   00001E   7B..         MOV     R3,#(SerialApp_epDesc >> 8) & 0xff
+   \   000020   12....       LCALL   ??afRegister?relay
+    155          
+    156            RegisterForKeys( task_id );
+   \   000023                ; Setup parameters for call to function RegisterForKeys
+   \   000023   EE           MOV     A,R6
+   \   000024   F9           MOV     R1,A
+   \   000025   12....       LCALL   ??RegisterForKeys?relay
+    157          
+    158            uartConfig.configured           = TRUE;              // 2x30 don't care - see uart driver.
+   \   000028   85..82       MOV     DPL,?XSP + 0
+   \   00002B   85..83       MOV     DPH,?XSP + 1
+   \   00002E   7401         MOV     A,#0x1
+   \   000030   F0           MOVX    @DPTR,A
+    159            uartConfig.baudRate             = SERIAL_APP_BAUD;
+   \   000031   12....       LCALL   ?XSTACK_DISP0_8
+   \   000034   7404         MOV     A,#0x4
+   \   000036   F0           MOVX    @DPTR,A
+    160            uartConfig.flowControl          = FALSE;
+   \   000037   7402         MOV     A,#0x2
+   \   000039   12....       LCALL   ?XSTACK_DISP0_8
+   \   00003C   E4           CLR     A
+   \   00003D   F0           MOVX    @DPTR,A
+    161            uartConfig.flowControlThreshold = SERIAL_APP_THRESH; // 2x30 don't care - see uart driver.
+   \   00003E   7403         MOV     A,#0x3
+   \   000040   12....       LCALL   ?XSTACK_DISP0_8
+   \   000043   7440         MOV     A,#0x40
+   \   000045   F0           MOVX    @DPTR,A
+   \   000046   A3           INC     DPTR
+   \   000047   E4           CLR     A
+   \   000048   F0           MOVX    @DPTR,A
+    162            uartConfig.rx.maxBufSize        = SERIAL_APP_RX_SZ;  // 2x30 don't care - see uart driver.
+   \   000049   740A         MOV     A,#0xa
+   \   00004B   12....       LCALL   ?XSTACK_DISP0_8
+   \   00004E   7480         MOV     A,#-0x80
+   \   000050   F0           MOVX    @DPTR,A
+   \   000051   A3           INC     DPTR
+   \   000052   E4           CLR     A
+   \   000053   F0           MOVX    @DPTR,A
+    163            uartConfig.tx.maxBufSize        = SERIAL_APP_TX_SZ;  // 2x30 don't care - see uart driver.
+   \   000054   7412         MOV     A,#0x12
+   \   000056   12....       LCALL   ?XSTACK_DISP0_8
+   \   000059   7480         MOV     A,#-0x80
+   \   00005B   F0           MOVX    @DPTR,A
+   \   00005C   A3           INC     DPTR
+   \   00005D   E4           CLR     A
+   \   00005E   F0           MOVX    @DPTR,A
+    164            uartConfig.idleTimeout          = SERIAL_APP_IDLE;   // 2x30 don't care - see uart driver.
+   \   00005F   7405         MOV     A,#0x5
+   \   000061   12....       LCALL   ?XSTACK_DISP0_8
+   \   000064   7406         MOV     A,#0x6
+   \   000066   F0           MOVX    @DPTR,A
+    165            uartConfig.intEnable            = TRUE;              // 2x30 don't care - see uart driver.
+   \   000067   7416         MOV     A,#0x16
+   \   000069   12....       LCALL   ?XSTACK_DISP0_8
+   \   00006C   7401         MOV     A,#0x1
+   \   00006E   F0           MOVX    @DPTR,A
+    166            uartConfig.callBackFunc         = SerialApp_CallBack;
+   \   00006F   741B         MOV     A,#0x1b
+   \   000071   12....       LCALL   ?XSTACK_DISP0_8
+   \   000074   74..         MOV     A,#??SerialApp_CallBack?relay & 0xff
+   \   000076   F0           MOVX    @DPTR,A
+   \   000077   A3           INC     DPTR
+   \   000078   74..         MOV     A,#(??SerialApp_CallBack?relay >> 8) & 0xff
+   \   00007A   F0           MOVX    @DPTR,A
+    167            HalUARTOpen (SERIAL_APP_PORT, &uartConfig);
+   \   00007B                ; Setup parameters for call to function HalUARTOpen
+   \   00007B   85..82       MOV     DPL,?XSP + 0
+   \   00007E   85..83       MOV     DPH,?XSP + 1
+   \   000081   AA82         MOV     R2,DPL
+   \   000083   AB83         MOV     R3,DPH
+   \   000085   7900         MOV     R1,#0x0
+   \   000087   12....       LCALL   ??HalUARTOpen?relay
+    168          
+    169          #if defined ( LCD_SUPPORTED )
+    170            HalLcdWriteString( "SerialApp", HAL_LCD_LINE_2 );
+   \   00008A                ; Setup parameters for call to function HalLcdWriteString
+   \   00008A   7901         MOV     R1,#0x1
+   \   00008C   7A..         MOV     R2,#`?<Constant "SerialApp">` & 0xff
+   \   00008E   7B..         MOV     R3,#(`?<Constant "SerialApp">` >> 8) & 0xff
+   \   000090   12....       LCALL   ??HalLcdWriteString?relay
+    171          #endif
+    172            
+    173            ZDO_RegisterForZDOMsg( SerialApp_TaskID, End_Device_Bind_rsp );
+   \   000093                ; Setup parameters for call to function ZDO_RegisterForZDOMsg
+   \   000093   7A20         MOV     R2,#0x20
+   \   000095   7B80         MOV     R3,#-0x80
+   \   000097   90....       MOV     DPTR,#SerialApp_TaskID
+   \   00009A   E0           MOVX    A,@DPTR
+   \   00009B   F9           MOV     R1,A
+   \   00009C   12....       LCALL   ??ZDO_RegisterForZDOMsg?relay
+    174            ZDO_RegisterForZDOMsg( SerialApp_TaskID, Match_Desc_rsp );
+   \   00009F                ; Setup parameters for call to function ZDO_RegisterForZDOMsg
+   \   00009F   7A06         MOV     R2,#0x6
+   \   0000A1   7B80         MOV     R3,#-0x80
+   \   0000A3   90....       MOV     DPTR,#SerialApp_TaskID
+   \   0000A6   E0           MOVX    A,@DPTR
+   \   0000A7   F9           MOV     R1,A
+   \   0000A8   12....       LCALL   ??ZDO_RegisterForZDOMsg?relay
+    175          }
+   \   0000AB   741D         MOV     A,#0x1d
+   \   0000AD   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000B0                REQUIRE ?Subroutine0
+   \   0000B0                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+    176          
+    177          /*********************************************************************
+    178           * @fn      SerialApp_ProcessEvent
+    179           *
+    180           * @brief   Generic Application Task event processor.
+    181           *
+    182           * @param   task_id  - The OSAL assigned task ID.
+    183           * @param   events   - Bit map of events to process.
+    184           *
+    185           * @return  Event flags of all unprocessed events.
+    186           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    187          UINT16 SerialApp_ProcessEvent( uint8 task_id, UINT16 events )
+   \                     SerialApp_ProcessEvent:
+    188          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+    189            (void)task_id;  // Intentionally unreferenced parameter
+    190            
+    191            if ( events & SYS_EVENT_MSG )
+   \   000009   5480         ANL     A,#0x80
+   \   00000B   703E         JNZ     ??SerialApp_ProcessEvent_0
+    192            {
+    193              afIncomingMSGPacket_t *MSGpkt;
+    194          
+    195              while ( (MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SerialApp_TaskID )) )
+    196              {
+    197                switch ( MSGpkt->hdr.event )
+    198                {
+    199                case AF_INCOMING_MSG_CMD:
+    200                  SerialApp_ProcessMSGCmd( MSGpkt );
+    201                  break;
+    202                  
+    203                case ZDO_STATE_CHANGE:
+    204                  SampleApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    205                  if ( (SampleApp_NwkState == DEV_ZB_COORD)
+    206                      || (SampleApp_NwkState == DEV_ROUTER)
+    207                      || (SampleApp_NwkState == DEV_END_DEVICE) )
+    208                  {
+    209                      // Start sending the periodic message in a regular interval.
+    210                      HalLedSet(HAL_LED_1, HAL_LED_MODE_ON);
+    211                      
+    212                      if(SampleApp_NwkState != DEV_ZB_COORD)
+    213                        SerialApp_DeviceConnect();              
+    214                  }
+    215                  else
+    216                  {
+    217                    // Device is no longer in the network
+    218                  }
+    219                  break;
+    220          
+    221                default:
+    222                  break;
+    223                }
+    224          
+    225                osal_msg_deallocate( (uint8 *)MSGpkt );
+    226              }
+    227          
+    228              return ( events ^ SYS_EVENT_MSG );
+    229            }
+    230          
+    231            if ( events & SERIALAPP_SEND_EVT )
+   \   00000D   EE           MOV     A,R6
+   \   00000E   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000010   5065         JNC     ??SerialApp_ProcessEvent_1
+    232            {
+    233              SerialApp_Send();
+   \   000012                ; Setup parameters for call to function SerialApp_Send
+   \   000012   12....       LCALL   ??SerialApp_Send?relay
+    234              return ( events ^ SERIALAPP_SEND_EVT );
+   \   000015   EE           MOV     A,R6
+   \   000016   6401         XRL     A,#0x1
+   \   000018   FA           MOV     R2,A
+   \   000019   EF           MOV     A,R7
+   \                     ??SerialApp_ProcessEvent_2:
+   \   00001A   FB           MOV     R3,A
+   \   00001B   02....       LJMP    ??SerialApp_ProcessEvent_3 & 0xFFFF
+    235            }
+   \                     ??SerialApp_ProcessEvent_4:
+   \   00001E   A3           INC     DPTR
+   \   00001F   E0           MOVX    A,@DPTR
+   \   000020   90....       MOV     DPTR,#SampleApp_NwkState
+   \   000023   F0           MOVX    @DPTR,A
+   \   000024   6409         XRL     A,#0x9
+   \   000026   600A         JZ      ??SerialApp_ProcessEvent_5
+   \   000028   E0           MOVX    A,@DPTR
+   \   000029   6407         XRL     A,#0x7
+   \   00002B   6005         JZ      ??SerialApp_ProcessEvent_5
+   \   00002D   E0           MOVX    A,@DPTR
+   \   00002E   6406         XRL     A,#0x6
+   \   000030   7012         JNZ     ??SerialApp_ProcessEvent_6
+   \                     ??SerialApp_ProcessEvent_5:
+   \   000032                ; Setup parameters for call to function HalLedSet
+   \   000032   7A01         MOV     R2,#0x1
+   \   000034   7901         MOV     R1,#0x1
+   \   000036   12....       LCALL   ??HalLedSet?relay
+   \   000039   90....       MOV     DPTR,#SampleApp_NwkState
+   \   00003C   E0           MOVX    A,@DPTR
+   \   00003D   6409         XRL     A,#0x9
+   \   00003F   6003         JZ      ??SerialApp_ProcessEvent_6
+   \   000041                ; Setup parameters for call to function SerialApp_DeviceConnect
+   \   000041   12....       LCALL   ??SerialApp_DeviceConnect?relay
+   \                     ??SerialApp_ProcessEvent_6:
+   \   000044                ; Setup parameters for call to function osal_msg_deallocate
+   \   000044   AA..         MOV     R2,?V0 + 0
+   \   000046   AB..         MOV     R3,?V0 + 1
+   \   000048   12....       LCALL   ??osal_msg_deallocate?relay
+   \                     ??SerialApp_ProcessEvent_0:
+   \   00004B                ; Setup parameters for call to function osal_msg_receive
+   \   00004B   90....       MOV     DPTR,#SerialApp_TaskID
+   \   00004E   E0           MOVX    A,@DPTR
+   \   00004F   F9           MOV     R1,A
+   \   000050   12....       LCALL   ??osal_msg_receive?relay
+   \   000053   8A..         MOV     ?V0 + 0,R2
+   \   000055   8B..         MOV     ?V0 + 1,R3
+   \   000057   EA           MOV     A,R2
+   \   000058   45..         ORL     A,?V0 + 1
+   \   00005A   6014         JZ      ??SerialApp_ProcessEvent_7
+   \   00005C   8A82         MOV     DPL,R2
+   \   00005E   8B83         MOV     DPH,R3
+   \   000060   E0           MOVX    A,@DPTR
+   \   000061   24E6         ADD     A,#-0x1a
+   \   000063   6006         JZ      ??SerialApp_ProcessEvent_8
+   \   000065   2449         ADD     A,#0x49
+   \   000067   60B5         JZ      ??SerialApp_ProcessEvent_4
+   \   000069   80D9         SJMP    ??SerialApp_ProcessEvent_6
+   \                     ??SerialApp_ProcessEvent_8:
+   \   00006B                ; Setup parameters for call to function SerialApp_ProcessMSGCmd
+   \   00006B   12....       LCALL   ??SerialApp_ProcessMSGCmd?relay
+   \   00006E   80D4         SJMP    ??SerialApp_ProcessEvent_6
+   \                     ??SerialApp_ProcessEvent_7:
+   \   000070   EE           MOV     A,R6
+   \   000071   FA           MOV     R2,A
+   \   000072   EF           MOV     A,R7
+   \   000073   6480         XRL     A,#0x80
+   \   000075   80A3         SJMP    ??SerialApp_ProcessEvent_2
+    236          
+    237            if ( events & SERIALAPP_RESP_EVT )
+   \                     ??SerialApp_ProcessEvent_1:
+   \   000077   5402         ANL     A,#0x2
+   \   000079   6051         JZ      ??SerialApp_ProcessEvent_9
+    238            {
+    239              SerialApp_Resp();
+   \   00007B                ; Setup parameters for call to function AF_DataRequest
+   \   00007B   75..1E       MOV     ?V0 + 0,#0x1e
+   \   00007E   78..         MOV     R0,#?V0 + 0
+   \   000080   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000083   75....       MOV     ?V0 + 0,#SerialApp_MsgID & 0xff
+   \   000086   75....       MOV     ?V0 + 1,#(SerialApp_MsgID >> 8) & 0xff
+   \   000089   78..         MOV     R0,#?V0 + 0
+   \   00008B   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00008E   75....       MOV     ?V0 + 0,#SerialApp_RspBuf & 0xff
+   \   000091   75....       MOV     ?V0 + 1,#(SerialApp_RspBuf >> 8) & 0xff
+   \   000094   78..         MOV     R0,#?V0 + 0
+   \   000096   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000099   75..04       MOV     ?V0 + 0,#0x4
+   \   00009C   75..00       MOV     ?V0 + 1,#0x0
+   \   00009F   78..         MOV     R0,#?V0 + 0
+   \   0000A1   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000A4   75..02       MOV     ?V0 + 0,#0x2
+   \   0000A7   78..         MOV     R0,#?V0 + 0
+   \   0000A9   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000AC   7900         MOV     R1,#0x0
+   \   0000AE   7C..         MOV     R4,#SerialApp_epDesc & 0xff
+   \   0000B0   7D..         MOV     R5,#(SerialApp_epDesc >> 8) & 0xff
+   \   0000B2   7A..         MOV     R2,#SerialApp_RxAddr & 0xff
+   \   0000B4   7B..         MOV     R3,#(SerialApp_RxAddr >> 8) & 0xff
+   \   0000B6   12....       LCALL   ??Subroutine13_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_23:
+   \   0000B9   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000BC   E9           MOV     A,R1
+   \   0000BD   6005         JZ      ??CrossCallReturnLabel_17
+   \   0000BF                ; Setup parameters for call to function osal_set_event
+   \   0000BF   7A02         MOV     R2,#0x2
+   \   0000C1   12....       LCALL   ?Subroutine4 & 0xFFFF
+    240              return ( events ^ SERIALAPP_RESP_EVT );
+   \                     ??CrossCallReturnLabel_17:
+   \   0000C4   EE           MOV     A,R6
+   \   0000C5   6402         XRL     A,#0x2
+   \   0000C7   FA           MOV     R2,A
+   \   0000C8   EF           MOV     A,R7
+   \   0000C9   FB           MOV     R3,A
+   \   0000CA   8004         SJMP    ??SerialApp_ProcessEvent_3
+    241            }
+    242          
+    243            return ( 0 );  // Discard unknown events.
+   \                     ??SerialApp_ProcessEvent_9:
+   \   0000CC   7A00         MOV     R2,#0x0
+   \   0000CE   7B00         MOV     R3,#0x0
+   \                     ??SerialApp_ProcessEvent_3:
+   \   0000D0                REQUIRE ?Subroutine1
+   \   0000D0                ; // Fall through to label ?Subroutine1
+    244          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7F04         MOV     R7,#0x4
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+    245          
+    246          /*********************************************************************
+    247           * @fn      SerialApp_ProcessMSGCmd
+    248           *
+    249           * @brief   Data message processor callback. This function processes
+    250           *          any incoming data - probably from other devices. Based
+    251           *          on the cluster ID, perform the intended action.
+    252           *
+    253           * @param   pkt - pointer to the incoming message packet
+    254           *
+    255           * @return  TRUE if the 'pkt' parameter is being used and will be freed later,
+    256           *          FALSE otherwise.
+    257           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine12_0:
+   \   000000   90....       MOV     DPTR,#SerialApp_TaskID
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   12....       LCALL   ??osal_set_event?relay
+   \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    258          void SerialApp_ProcessMSGCmd( afIncomingMSGPacket_t *pkt )
+   \                     SerialApp_ProcessMSGCmd:
+    259          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+    260            uint8 stat;
+    261            uint8 seqnb;
+    262            uint8 delay;
+    263          
+    264            switch ( pkt->clusterId )
+   \   000009   8E82         MOV     DPL,R6
+   \   00000B   8F83         MOV     DPH,R7
+   \   00000D   A3           INC     DPTR
+   \   00000E   A3           INC     DPTR
+   \   00000F   A3           INC     DPTR
+   \   000010   A3           INC     DPTR
+   \   000011   E0           MOVX    A,@DPTR
+   \   000012   F5..         MOV     ?V0 + 0,A
+   \   000014   A3           INC     DPTR
+   \   000015   E0           MOVX    A,@DPTR
+   \   000016   F5..         MOV     ?V0 + 1,A
+   \   000018   78..         MOV     R0,#?V0 + 0
+   \   00001A   12....       LCALL   ?US_SWITCH_DENSE
+   \                     `?<Jumptable for SerialApp_ProcessMSGCmd>_0`:
+   \   00001D   0100         DW        1
+   \   00001F   03           DB        3
+   \   000020   ....         DW        ??CrossCallReturnLabel_6
+   \   000022   ....         DW        ??SerialApp_ProcessMSGCmd_0
+   \   000024   ....         DW        ??SerialApp_ProcessMSGCmd_1
+   \   000026   ....         DW        ??SerialApp_ProcessMSGCmd_2
+   \   000028   ....         DW        ??SerialApp_ProcessMSGCmd_3
+    265            {
+    266            // A message with a serial data block to be transmitted on the serial port.
+    267            case SERIALAPP_CLUSTERID1: //ÊÕµ½·¢ËÍ¹ýÀ´µÄÊý¾ÝÍ¨¹ý´®¿ÚÊä³öµ½µçÄÔÏÔÊ¾
+    268              // Store the address for sending and retrying.
+    269              osal_memcpy(&SerialApp_RxAddr, &(pkt->srcAddr), sizeof( afAddrType_t ));
+   \                     ??SerialApp_ProcessMSGCmd_0:
+   \   00002A                ; Setup parameters for call to function osal_memcpy
+   \   00002A   EE           MOV     A,R6
+   \   00002B   2406         ADD     A,#0x6
+   \   00002D   F5..         MOV     ?V0 + 0,A
+   \   00002F   EF           MOV     A,R7
+   \   000030   3400         ADDC    A,#0x0
+   \   000032   F5..         MOV     ?V0 + 1,A
+   \   000034   75..00       MOV     ?V0 + 2,#0x0
+   \   000037   78..         MOV     R0,#?V0 + 0
+   \   000039   12....       LCALL   ?PUSH_XSTACK_I_THREE
+   \   00003C   7C0C         MOV     R4,#0xc
+   \   00003E   7D00         MOV     R5,#0x0
+   \   000040   7A..         MOV     R2,#SerialApp_RxAddr & 0xff
+   \   000042   7B..         MOV     R3,#(SerialApp_RxAddr >> 8) & 0xff
+   \   000044   12....       LCALL   ??osal_memcpy?relay
+   \   000047   7403         MOV     A,#0x3
+   \   000049   12....       LCALL   ?DEALLOC_XSTACK8
+    270          
+    271              seqnb = pkt->cmd.Data[0];
+   \   00004C   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   00004F   F5..         MOV     ?V0 + 0,A
+    272          
+    273              // Keep message if not a repeat packet
+    274              if ( (seqnb > SerialApp_RxSeq) ||                    // Normal
+    275                  ((seqnb < 0x80 ) && ( SerialApp_RxSeq > 0x80)) ) // Wrap-around
+   \   000051   90....       MOV     DPTR,#SerialApp_RxSeq
+   \   000054   E0           MOVX    A,@DPTR
+   \   000055   C3           CLR     C
+   \   000056   95..         SUBB    A,?V0 + 0
+   \   000058   400D         JC      ??SerialApp_ProcessMSGCmd_4
+   \   00005A   E5..         MOV     A,?V0 + 0
+   \   00005C   C3           CLR     C
+   \   00005D   9480         SUBB    A,#-0x80
+   \   00005F   503F         JNC     ??SerialApp_ProcessMSGCmd_5
+   \   000061   E0           MOVX    A,@DPTR
+   \   000062   C3           CLR     C
+   \   000063   9481         SUBB    A,#-0x7f
+   \   000065   4039         JC      ??SerialApp_ProcessMSGCmd_5
+    276              {
+    277                  // Transmit the data on the serial port. // Í¨¹ý´®¿Ú·¢ËÍÊý¾Ýµ½PC»ú
+    278                  if ( HalUARTWrite( SERIAL_APP_PORT, pkt->cmd.Data+1, (pkt->cmd.DataLength-1) ) )
+   \                     ??SerialApp_ProcessMSGCmd_4:
+   \   000067                ; Setup parameters for call to function HalUARTWrite
+   \   000067   EE           MOV     A,R6
+   \   000068   2420         ADD     A,#0x20
+   \   00006A   F582         MOV     DPL,A
+   \   00006C   EF           MOV     A,R7
+   \   00006D   3400         ADDC    A,#0x0
+   \   00006F   F583         MOV     DPH,A
+   \   000071   E0           MOVX    A,@DPTR
+   \   000072   24FF         ADD     A,#-0x1
+   \   000074   FC           MOV     R4,A
+   \   000075   A3           INC     DPTR
+   \   000076   E0           MOVX    A,@DPTR
+   \   000077   34FF         ADDC    A,#-0x1
+   \   000079   FD           MOV     R5,A
+   \   00007A   12....       LCALL   ?Subroutine7 & 0xFFFF
+   \                     ??CrossCallReturnLabel_8:
+   \   00007D   2401         ADD     A,#0x1
+   \   00007F   FA           MOV     R2,A
+   \   000080   A3           INC     DPTR
+   \   000081   E0           MOVX    A,@DPTR
+   \   000082   3400         ADDC    A,#0x0
+   \   000084   FB           MOV     R3,A
+   \   000085   7900         MOV     R1,#0x0
+   \   000087   12....       LCALL   ??HalUARTWrite?relay
+   \   00008A   8B..         MOV     ?V0 + 3,R3
+   \   00008C   EA           MOV     A,R2
+   \   00008D   45..         ORL     A,?V0 + 3
+   \   00008F   6009         JZ      ??SerialApp_ProcessMSGCmd_6
+    279                  {
+    280                    // Save for next incoming message
+    281                    SerialApp_RxSeq = seqnb;
+   \   000091   E5..         MOV     A,?V0 + 0
+   \   000093   90....       MOV     DPTR,#SerialApp_RxSeq
+   \   000096   F0           MOVX    @DPTR,A
+    282                    stat = OTA_SUCCESS;
+   \   000097   E4           CLR     A
+   \   000098   8008         SJMP    ??SerialApp_ProcessMSGCmd_7
+    283                  }
+    284                  else
+    285                  {
+    286                    stat = OTA_SER_BUSY;
+   \                     ??SerialApp_ProcessMSGCmd_6:
+   \   00009A   7402         MOV     A,#0x2
+   \   00009C   7810         MOV     R0,#0x10
+   \   00009E   8004         SJMP    ??SerialApp_ProcessMSGCmd_8
+    287                  }
+    288              }
+    289              else
+    290              {
+    291                  stat = OTA_DUP_MSG;
+   \                     ??SerialApp_ProcessMSGCmd_5:
+   \   0000A0   7401         MOV     A,#0x1
+   \                     ??SerialApp_ProcessMSGCmd_7:
+   \   0000A2   7801         MOV     R0,#0x1
+    292              }
+    293          
+    294              // Select approproiate OTA flow-control delay.
+    295              delay = (stat == OTA_SER_BUSY) ? SERIALAPP_NAK_DELAY : SERIALAPP_ACK_DELAY;
+    296          
+    297              // Build & send OTA response message.
+    298              SerialApp_RspBuf[0] = stat;
+   \                     ??SerialApp_ProcessMSGCmd_8:
+   \   0000A4   90....       MOV     DPTR,#SerialApp_RspBuf
+   \   0000A7   F0           MOVX    @DPTR,A
+    299              SerialApp_RspBuf[1] = seqnb;
+   \   0000A8   E5..         MOV     A,?V0 + 0
+   \   0000AA   A3           INC     DPTR
+   \   0000AB   F0           MOVX    @DPTR,A
+    300              SerialApp_RspBuf[2] = LO_UINT16( delay );
+   \   0000AC   E8           MOV     A,R0
+   \   0000AD   A3           INC     DPTR
+   \   0000AE   F0           MOVX    @DPTR,A
+    301              SerialApp_RspBuf[3] = HI_UINT16( delay );
+   \   0000AF   A3           INC     DPTR
+   \   0000B0   E4           CLR     A
+   \   0000B1   F0           MOVX    @DPTR,A
+    302              osal_set_event( SerialApp_TaskID, SERIALAPP_RESP_EVT ); //ÊÕµ½Êý¾Ýºó£¬·¢ËÍÒ»¸öÏìÓ¦ÊÂ¼þ
+   \   0000B2                ; Setup parameters for call to function osal_set_event
+   \   0000B2   7A02         MOV     R2,#0x2
+   \   0000B4   FB           MOV     R3,A
+   \   0000B5   12....       LCALL   ??Subroutine12_0 & 0xFFFF
+    303              osal_stop_timerEx(SerialApp_TaskID, SERIALAPP_RESP_EVT);
+   \                     ??CrossCallReturnLabel_19:
+   \   0000B8                ; Setup parameters for call to function osal_stop_timerEx
+   \   0000B8   7A02         MOV     R2,#0x2
+   \   0000BA   7B00         MOV     R3,#0x0
+   \                     ??SerialApp_ProcessMSGCmd_9:
+   \   0000BC   90....       MOV     DPTR,#SerialApp_TaskID
+   \   0000BF   E0           MOVX    A,@DPTR
+   \   0000C0   F9           MOV     R1,A
+   \   0000C1   12....       LCALL   ??osal_stop_timerEx?relay
+    304              break;
+   \   0000C4   8072         SJMP    ??CrossCallReturnLabel_6
+    305          
+    306            // A response to a received serial data block.   // ½Óµ½ÏìÓ¦ÏûÏ¢
+    307            case SERIALAPP_CLUSTERID2:
+    308              if ((pkt->cmd.Data[1] == SerialApp_TxSeq) &&
+    309                 ((pkt->cmd.Data[0] == OTA_SUCCESS) || (pkt->cmd.Data[0] == OTA_DUP_MSG)))
+   \                     ??SerialApp_ProcessMSGCmd_1:
+   \   0000C6   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   0000C9   E0           MOVX    A,@DPTR
+   \   0000CA   F8           MOV     R0,A
+   \   0000CB   90....       MOV     DPTR,#SerialApp_TxSeq
+   \   0000CE   E0           MOVX    A,@DPTR
+   \   0000CF   68           XRL     A,R0
+   \   0000D0   701D         JNZ     ??SerialApp_ProcessMSGCmd_10
+   \   0000D2   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_1:
+   \   0000D5   600E         JZ      ??SerialApp_ProcessMSGCmd_11
+   \   0000D7   12....       LCALL   ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_13:
+   \   0000DA   A3           INC     DPTR
+   \   0000DB   E0           MOVX    A,@DPTR
+   \   0000DC   F583         MOV     DPH,A
+   \   0000DE   8882         MOV     DPL,R0
+   \   0000E0   E0           MOVX    A,@DPTR
+   \   0000E1   6401         XRL     A,#0x1
+   \   0000E3   700A         JNZ     ??SerialApp_ProcessMSGCmd_10
+    310              {
+    311                SerialApp_TxLen = 0;
+   \                     ??SerialApp_ProcessMSGCmd_11:
+   \   0000E5   90....       MOV     DPTR,#SerialApp_TxLen
+   \   0000E8   E4           CLR     A
+   \   0000E9   F0           MOVX    @DPTR,A
+    312                osal_stop_timerEx(SerialApp_TaskID, SERIALAPP_SEND_EVT);
+   \   0000EA                ; Setup parameters for call to function osal_stop_timerEx
+   \   0000EA   7A01         MOV     R2,#0x1
+   \   0000EC   FB           MOV     R3,A
+   \   0000ED   80CD         SJMP    ??SerialApp_ProcessMSGCmd_9
+    313              }
+    314              else
+    315              {
+    316                // Re-start timeout according to delay sent from other device.
+    317                delay = BUILD_UINT16( pkt->cmd.Data[2], pkt->cmd.Data[3] );
+    318                osal_start_timerEx( SerialApp_TaskID, SERIALAPP_SEND_EVT, delay );
+   \                     ??SerialApp_ProcessMSGCmd_10:
+   \   0000EF                ; Setup parameters for call to function osal_start_timerEx
+   \   0000EF   12....       LCALL   ?Subroutine3 & 0xFFFF
+    319              }
+   \                     ??CrossCallReturnLabel_3:
+   \   0000F2   A3           INC     DPTR
+   \   0000F3   E0           MOVX    A,@DPTR
+   \   0000F4   FC           MOV     R4,A
+   \   0000F5   7D00         MOV     R5,#0x0
+   \   0000F7   7A01         MOV     R2,#0x1
+   \   0000F9   7B00         MOV     R3,#0x0
+   \   0000FB   90....       MOV     DPTR,#SerialApp_TaskID
+   \   0000FE   E0           MOVX    A,@DPTR
+   \   0000FF   F9           MOV     R1,A
+   \   000100   12....       LCALL   ??osal_start_timerEx?relay
+   \   000103   8033         SJMP    ??CrossCallReturnLabel_6
+    320              break;
+    321          
+    322              case SERIALAPP_CONNECTREQ_CLUSTER:
+    323                SerialApp_ConnectReqProcess((uint8*)pkt->cmd.Data);
+   \                     ??SerialApp_ProcessMSGCmd_2:
+   \   000105                ; Setup parameters for call to function SerialApp_ConnectReqProcess
+   \   000105   12....       LCALL   ?Subroutine7 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   000108   FA           MOV     R2,A
+   \   000109   A3           INC     DPTR
+   \   00010A   E0           MOVX    A,@DPTR
+   \   00010B   FB           MOV     R3,A
+   \   00010C   12....       LCALL   ??SerialApp_ConnectReqProcess?relay
+    324                
+    325              case SERIALAPP_CONNECTRSP_CLUSTER:
+    326                SerialApp_DeviceConnectRsp((uint8*)pkt->cmd.Data);
+   \                     ??SerialApp_ProcessMSGCmd_3:
+   \   00010F   12....       LCALL   ?Subroutine7 & 0xFFFF
+   \                     ??CrossCallReturnLabel_10:
+   \   000112   F8           MOV     R0,A
+   \   000113   A3           INC     DPTR
+   \   000114   E0           MOVX    A,@DPTR
+   \   000115   F9           MOV     R1,A
+   \   000116   90....       MOV     DPTR,#SerialApp_TxAddr + 8
+   \   000119   7402         MOV     A,#0x2
+   \   00011B   F0           MOVX    @DPTR,A
+   \   00011C   A3           INC     DPTR
+   \   00011D   740B         MOV     A,#0xb
+   \   00011F   F0           MOVX    @DPTR,A
+   \   000120   8882         MOV     DPL,R0
+   \   000122   8983         MOV     DPH,R1
+   \   000124   A3           INC     DPTR
+   \   000125   E0           MOVX    A,@DPTR
+   \   000126   FA           MOV     R2,A
+   \   000127   8882         MOV     DPL,R0
+   \   000129   8983         MOV     DPH,R1
+   \   00012B   E0           MOVX    A,@DPTR
+   \   00012C   F9           MOV     R1,A
+   \   00012D   EA           MOV     A,R2
+   \   00012E   90....       MOV     DPTR,#SerialApp_TxAddr
+   \   000131   F0           MOVX    @DPTR,A
+   \   000132   A3           INC     DPTR
+   \   000133   E9           MOV     A,R1
+   \   000134   F0           MOVX    @DPTR,A
+   \   000135                ; Setup parameters for call to function HalLedSet
+   \   000135   12....       LCALL   ?Subroutine6 & 0xFFFF
+    327                
+    328              default:
+    329                break;
+    330            }
+    331          }
+   \                     ??CrossCallReturnLabel_6:
+   \   000138   02....       LJMP    ?Subroutine1 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine7:
+   \   000000   12....       LCALL   ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_14:
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine10:
+   \   000000   12....       LCALL   ?Subroutine11 & 0xFFFF
+   \                     ??CrossCallReturnLabel_16:
+   \   000003   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine11:
+   \   000000   EE           MOV     A,R6
+   \   000001   2422         ADD     A,#0x22
+   \   000003   F582         MOV     DPL,A
+   \   000005   EF           MOV     A,R7
+   \   000006   3400         ADDC    A,#0x0
+   \   000008   F583         MOV     DPH,A
+   \   00000A   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   12....       LCALL   ?Subroutine9 & 0xFFFF
+   \                     ??CrossCallReturnLabel_12:
+   \   000003   A3           INC     DPTR
+   \   000004   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL   ?Subroutine9 & 0xFFFF
+   \                     ??CrossCallReturnLabel_11:
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine9:
+   \   000000   12....       LCALL   ?Subroutine11 & 0xFFFF
+   \                     ??CrossCallReturnLabel_15:
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F8           MOV     R0,A
+   \   000005   A3           INC     DPTR
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   F583         MOV     DPH,A
+   \   000009   8882         MOV     DPL,R0
+   \   00000B   22           RET
+    332          
+    333          /*********************************************************************
+    334           * @fn      SerialApp_Send
+    335           *
+    336           * @brief   Send data OTA.
+    337           *
+    338           * @param   none
+    339           *
+    340           * @return  none
+    341           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   7B00         MOV     R3,#0x0
+   \   000002                REQUIRE ??Subroutine12_0
+   \   000002                ; // Fall through to label ??Subroutine12_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    342          static void SerialApp_Send(void)
+   \                     SerialApp_Send:
+    343          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    344          #if SERIAL_APP_LOOPBACK
+    345              if (SerialApp_TxLen < SERIAL_APP_TX_MAX)
+    346              {
+    347                  SerialApp_TxLen += HalUARTRead(SERIAL_APP_PORT, SerialApp_TxBuf+SerialApp_TxLen+1,
+    348                                                                SERIAL_APP_TX_MAX-SerialApp_TxLen);
+    349              }
+    350            
+    351              if (SerialApp_TxLen)
+    352              {
+    353                (void)SerialApp_TxAddr;
+    354                if (HalUARTWrite(SERIAL_APP_PORT, SerialApp_TxBuf+1, SerialApp_TxLen))
+    355                {
+    356                  SerialApp_TxLen = 0;
+    357                }
+    358                else
+    359                {
+    360                  osal_set_event(SerialApp_TaskID, SERIALAPP_SEND_EVT);
+    361                }
+    362              }
+    363          #else
+    364              if (!SerialApp_TxLen && 
+    365                  (SerialApp_TxLen = HalUARTRead(SERIAL_APP_PORT, SerialApp_TxBuf+1, SERIAL_APP_TX_MAX)))
+   \   000005   90....       MOV     DPTR,#SerialApp_TxLen
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   701E         JNZ     ??SerialApp_Send_0
+   \   00000B                ; Setup parameters for call to function HalUARTRead
+   \   00000B   7C50         MOV     R4,#0x50
+   \   00000D   7D00         MOV     R5,#0x0
+   \   00000F   7A..         MOV     R2,#(SerialApp_TxBuf + 1) & 0xff
+   \   000011   7B..         MOV     R3,#((SerialApp_TxBuf + 1) >> 8) & 0xff
+   \   000013   7900         MOV     R1,#0x0
+   \   000015   12....       LCALL   ??HalUARTRead?relay
+   \   000018   EA           MOV     A,R2
+   \   000019   90....       MOV     DPTR,#SerialApp_TxLen
+   \   00001C   F0           MOVX    @DPTR,A
+   \   00001D   6053         JZ      ??CrossCallReturnLabel_18
+    366              {
+    367                // Pre-pend sequence number to the Tx message.
+    368                SerialApp_TxBuf[0] = ++SerialApp_TxSeq;
+   \   00001F   90....       MOV     DPTR,#SerialApp_TxSeq
+   \   000022   E0           MOVX    A,@DPTR
+   \   000023   04           INC     A
+   \   000024   F0           MOVX    @DPTR,A
+   \   000025   90....       MOV     DPTR,#SerialApp_TxBuf
+   \   000028   F0           MOVX    @DPTR,A
+    369              }
+    370            
+    371              if (SerialApp_TxLen)
+    372              {
+    373                if (afStatus_SUCCESS != AF_DataRequest(&SerialApp_TxAddr,
+    374                                                       (endPointDesc_t *)&SerialApp_epDesc,
+    375                                                        SERIALAPP_CLUSTERID1,
+    376                                                        SerialApp_TxLen+1, SerialApp_TxBuf,
+    377                                                        &SerialApp_MsgID, 0, AF_DEFAULT_RADIUS))
+   \                     ??SerialApp_Send_0:
+   \   000029                ; Setup parameters for call to function AF_DataRequest
+   \   000029   75..1E       MOV     ?V0 + 0,#0x1e
+   \   00002C   78..         MOV     R0,#?V0 + 0
+   \   00002E   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000031   75....       MOV     ?V0 + 0,#SerialApp_MsgID & 0xff
+   \   000034   75....       MOV     ?V0 + 1,#(SerialApp_MsgID >> 8) & 0xff
+   \   000037   78..         MOV     R0,#?V0 + 0
+   \   000039   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00003C   75....       MOV     ?V0 + 0,#SerialApp_TxBuf & 0xff
+   \   00003F   75....       MOV     ?V0 + 1,#(SerialApp_TxBuf >> 8) & 0xff
+   \   000042   78..         MOV     R0,#?V0 + 0
+   \   000044   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000047   90....       MOV     DPTR,#SerialApp_TxLen
+   \   00004A   E0           MOVX    A,@DPTR
+   \   00004B   2401         ADD     A,#0x1
+   \   00004D   F5..         MOV     ?V0 + 0,A
+   \   00004F   E4           CLR     A
+   \   000050   3400         ADDC    A,#0x0
+   \   000052   F5..         MOV     ?V0 + 1,A
+   \   000054   78..         MOV     R0,#?V0 + 0
+   \   000056   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000059   75..01       MOV     ?V0 + 0,#0x1
+   \   00005C   75..00       MOV     ?V0 + 1,#0x0
+   \   00005F   78..         MOV     R0,#?V0 + 0
+   \   000061   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000064   12....       LCALL   ?Subroutine8 & 0xFFFF
+   \                     ??CrossCallReturnLabel_20:
+   \   000067   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00006A   E9           MOV     A,R1
+   \   00006B   6005         JZ      ??CrossCallReturnLabel_18
+    378                {
+    379                  osal_set_event(SerialApp_TaskID, SERIALAPP_SEND_EVT);
+   \   00006D                ; Setup parameters for call to function osal_set_event
+   \   00006D   7A01         MOV     R2,#0x1
+   \   00006F   12....       LCALL   ?Subroutine4 & 0xFFFF
+    380                }
+    381              }
+    382          #endif
+    383          }
+   \                     ??CrossCallReturnLabel_18:
+   \   000072   7F02         MOV     R7,#0x2
+   \   000074   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine8:
+   \   000000   7900         MOV     R1,#0x0
+   \   000002   7C..         MOV     R4,#SerialApp_epDesc & 0xff
+   \   000004   7D..         MOV     R5,#(SerialApp_epDesc >> 8) & 0xff
+   \   000006   7A..         MOV     R2,#SerialApp_TxAddr & 0xff
+   \   000008   7B..         MOV     R3,#(SerialApp_TxAddr >> 8) & 0xff
+   \   00000A                REQUIRE ??Subroutine13_0
+   \   00000A                ; // Fall through to label ??Subroutine13_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine13_0:
+   \   000000   12....       LCALL   ??AF_DataRequest?relay
+   \   000003   7409         MOV     A,#0x9
+   \   000005   22           RET
+    384          
+    385          /*********************************************************************
+    386           * @fn      SerialApp_Resp
+    387           *
+    388           * @brief   Send data OTA.
+    389           *
+    390           * @param   none
+    391           *
+    392           * @return  none
+    393           */
+    394          static void SerialApp_Resp(void)
+    395          {
+    396            if (afStatus_SUCCESS != AF_DataRequest(&SerialApp_RxAddr,
+    397                                                   (endPointDesc_t *)&SerialApp_epDesc,
+    398                                                    SERIALAPP_CLUSTERID2,
+    399                                                    SERIAL_APP_RSP_CNT, SerialApp_RspBuf,
+    400                                                   &SerialApp_MsgID, 0, AF_DEFAULT_RADIUS))
+    401            {
+    402              osal_set_event(SerialApp_TaskID, SERIALAPP_RESP_EVT);
+    403            }
+    404          }
+    405          
+    406          /*********************************************************************
+    407           * @fn      SerialApp_CallBack
+    408           *
+    409           * @brief   Send data OTA.
+    410           *
+    411           * @param   port - UART port.
+    412           * @param   event - the UART port event flag.
+    413           *
+    414           * @return  none
+    415           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    416          static void SerialApp_CallBack(uint8 port, uint8 event)
+   \                     SerialApp_CallBack:
+    417          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+    418            (void)port;
+    419          
+    420            if ((event & (HAL_UART_RX_FULL | HAL_UART_RX_ABOUT_FULL | HAL_UART_RX_TIMEOUT)) &&
+    421          #if SERIAL_APP_LOOPBACK
+    422                (SerialApp_TxLen < SERIAL_APP_TX_MAX))
+    423          #else
+    424                !SerialApp_TxLen)
+   \   000007   7407         MOV     A,#0x7
+   \   000009   5E           ANL     A,R6
+   \   00000A   6009         JZ      ??SerialApp_CallBack_0
+   \   00000C   90....       MOV     DPTR,#SerialApp_TxLen
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   7003         JNZ     ??SerialApp_CallBack_0
+    425          #endif
+    426            {
+    427              SerialApp_Send();
+   \   000012                ; Setup parameters for call to function SerialApp_Send
+   \   000012   12....       LCALL   ??SerialApp_Send?relay
+    428            }
+    429          }
+   \                     ??SerialApp_CallBack_0:
+   \   000015   02....       LJMP    ?Subroutine0 & 0xFFFF
+    430          
+    431          /*********************************************************************
+    432          *********************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    433          void  SerialApp_DeviceConnect()              
+   \                     SerialApp_DeviceConnect:
+    434          {
+   \   000000   74F2         MOV     A,#-0xe
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 14
+   \   000005                ; Auto size: 30
+   \   000005   74E2         MOV     A,#-0x1e
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+    435          #if ZDO_COORDINATOR
+    436            
+    437          #else
+    438            
+    439            uint16 nwkAddr;
+    440            uint16 parentNwkAddr;
+    441            char buff[30] = {0};
+   \   00000A   85..82       MOV     DPL,?XSP + 0
+   \   00000D   85..83       MOV     DPH,?XSP + 1
+   \   000010   AC82         MOV     R4,DPL
+   \   000012   AD83         MOV     R5,DPH
+   \   000014   7583..       MOV     DPH,#(`?<Constant {0}>` >> 8) & 0xff
+   \   000017   7582..       MOV     DPL,#`?<Constant {0}>` & 0xff
+   \   00001A   741E         MOV     A,#0x1e
+   \   00001C   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    442            
+    443            HalLedBlink( HAL_LED_2, 3, 50, (1000 / 4) );
+   \   00001F                ; Setup parameters for call to function HalLedBlink
+   \   00001F   7CFA         MOV     R4,#-0x6
+   \   000021   FD           MOV     R5,A
+   \   000022   7B32         MOV     R3,#0x32
+   \   000024   7A03         MOV     R2,#0x3
+   \   000026   7902         MOV     R1,#0x2
+   \   000028   12....       LCALL   ??HalLedBlink?relay
+    444            
+    445            nwkAddr = NLME_GetShortAddr();
+   \   00002B                ; Setup parameters for call to function NLME_GetShortAddr
+   \   00002B   12....       LCALL   ??NLME_GetShortAddr?relay
+   \   00002E   8A..         MOV     ?V0 + 0,R2
+   \   000030   8B..         MOV     ?V0 + 1,R3
+    446            parentNwkAddr = NLME_GetCoordShortAddr();
+   \   000032                ; Setup parameters for call to function NLME_GetCoordShortAddr
+   \   000032   12....       LCALL   ??NLME_GetCoordShortAddr?relay
+   \   000035   8A..         MOV     ?V0 + 2,R2
+   \   000037   8B..         MOV     ?V0 + 3,R3
+    447            sprintf(buff, "parent:%d   self:%d\r\n", parentNwkAddr, nwkAddr);
+   \   000039                ; Setup parameters for call to function sprintf
+   \   000039   78..         MOV     R0,#?V0 + 0
+   \   00003B   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00003E   78..         MOV     R0,#?V0 + 2
+   \   000040   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000043   7C..         MOV     R4,#`?<Constant "parent:%d   self:%d\\r\\n">` & 0xff
+   \   000045   7D..         MOV     R5,#(`?<Constant "parent:%d   self:%d\\r\\n">` >> 8) & 0xff
+   \   000047   7404         MOV     A,#0x4
+   \   000049   12....       LCALL   ?XSTACK_DISP0_8
+   \   00004C   AA82         MOV     R2,DPL
+   \   00004E   AB83         MOV     R3,DPH
+   \   000050   12....       LCALL   ??sprintf?relay
+   \   000053   7404         MOV     A,#0x4
+   \   000055   12....       LCALL   ?DEALLOC_XSTACK8
+    448            HalUARTWrite ( 0, (uint8*)buff, strlen(buff));
+   \   000058                ; Setup parameters for call to function HalUARTWrite
+   \   000058                ; Setup parameters for call to function strlen
+   \   000058   12....       LCALL   ?Subroutine5 & 0xFFFF
+    449            
+    450            SerialApp_TxAddr.addrMode = (afAddrMode_t)Addr16Bit;
+   \                     ??CrossCallReturnLabel_4:
+   \   00005B   90....       MOV     DPTR,#SerialApp_TxAddr + 8
+   \   00005E   7402         MOV     A,#0x2
+   \   000060   F0           MOVX    @DPTR,A
+    451            SerialApp_TxAddr.endPoint = SERIALAPP_ENDPOINT;
+   \   000061   A3           INC     DPTR
+   \   000062   740B         MOV     A,#0xb
+   \   000064   F0           MOVX    @DPTR,A
+    452            SerialApp_TxAddr.addr.shortAddr = parentNwkAddr;
+   \   000065   90....       MOV     DPTR,#SerialApp_TxAddr
+   \   000068   E5..         MOV     A,?V0 + 2
+   \   00006A   F0           MOVX    @DPTR,A
+   \   00006B   A3           INC     DPTR
+   \   00006C   E5..         MOV     A,?V0 + 3
+   \   00006E   F0           MOVX    @DPTR,A
+    453            
+    454            buff[0] = HI_UINT16( nwkAddr );
+   \   00006F   85..82       MOV     DPL,?XSP + 0
+   \   000072   85..83       MOV     DPH,?XSP + 1
+   \   000075   E5..         MOV     A,?V0 + 1
+   \   000077   F0           MOVX    @DPTR,A
+    455            buff[1] = LO_UINT16( nwkAddr );
+   \   000078   7401         MOV     A,#0x1
+   \   00007A   12....       LCALL   ?XSTACK_DISP0_8
+   \   00007D   E5..         MOV     A,?V0 + 0
+   \   00007F   F0           MOVX    @DPTR,A
+    456            
+    457            if ( AF_DataRequest( &SerialApp_TxAddr, &SerialApp_epDesc,
+    458                                 SERIALAPP_CONNECTREQ_CLUSTER,
+    459                                 2,
+    460                                 (uint8*)buff,
+    461                                 &SerialApp_MsgID, 
+    462                                 0, 
+    463                                 AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+   \   000080                ; Setup parameters for call to function AF_DataRequest
+   \   000080   75..1E       MOV     ?V0 + 0,#0x1e
+   \   000083   78..         MOV     R0,#?V0 + 0
+   \   000085   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000088   75....       MOV     ?V0 + 0,#SerialApp_MsgID & 0xff
+   \   00008B   75....       MOV     ?V0 + 1,#(SerialApp_MsgID >> 8) & 0xff
+   \   00008E   78..         MOV     R0,#?V0 + 0
+   \   000090   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000093   7403         MOV     A,#0x3
+   \   000095   12....       LCALL   ?XSTACK_DISP0_8
+   \   000098   8582..       MOV     ?V0 + 0,DPL
+   \   00009B   8583..       MOV     ?V0 + 1,DPH
+   \   00009E   78..         MOV     R0,#?V0 + 0
+   \   0000A0   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000A3   75..02       MOV     ?V0 + 0,#0x2
+   \   0000A6   75..00       MOV     ?V0 + 1,#0x0
+   \   0000A9   78..         MOV     R0,#?V0 + 0
+   \   0000AB   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000AE   75..03       MOV     ?V0 + 0,#0x3
+   \   0000B1   78..         MOV     R0,#?V0 + 0
+   \   0000B3   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000B6   12....       LCALL   ?Subroutine8 & 0xFFFF
+   \                     ??CrossCallReturnLabel_21:
+   \   0000B9   12....       LCALL   ?DEALLOC_XSTACK8
+    464            {
+    465            }
+    466            else
+    467            {
+    468              // Error occurred in request to send.
+    469            }
+    470            
+    471          #endif    //ZDO_COORDINATOR
+    472          }
+   \   0000BC   741E         MOV     A,#0x1e
+   \   0000BE   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000C1   7F06         MOV     R7,#0x6
+   \   0000C3   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   85..82       MOV     DPL,?XSP + 0
+   \   000003   85..83       MOV     DPH,?XSP + 1
+   \   000006   AA82         MOV     R2,DPL
+   \   000008   AB83         MOV     R3,DPH
+   \   00000A   12....       LCALL   ??strlen?relay
+   \   00000D   EA           MOV     A,R2
+   \   00000E   FC           MOV     R4,A
+   \   00000F   EB           MOV     A,R3
+   \   000010   FD           MOV     R5,A
+   \   000011   85..82       MOV     DPL,?XSP + 0
+   \   000014   85..83       MOV     DPH,?XSP + 1
+   \   000017   AA82         MOV     R2,DPL
+   \   000019   AB83         MOV     R3,DPH
+   \   00001B   7900         MOV     R1,#0x0
+   \   00001D   12....       LCALL   ??HalUARTWrite?relay
+   \   000020   22           RET
+    473          
+    474          void SerialApp_DeviceConnectRsp(uint8 *buf)
+    475          {
+    476          #if ZDO_COORDINATOR
+    477            
+    478          #else
+    479            SerialApp_TxAddr.addrMode = (afAddrMode_t)Addr16Bit;
+    480            SerialApp_TxAddr.endPoint = SERIALAPP_ENDPOINT;
+    481            SerialApp_TxAddr.addr.shortAddr = BUILD_UINT16(buf[1], buf[0]);
+    482            
+    483            HalLedSet(HAL_LED_2, HAL_LED_MODE_ON);
+    484            HalUARTWrite ( 0, "< connect success>\n", 23);
+    485          #endif
+    486          }
+    487          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    488          void SerialApp_ConnectReqProcess(uint8 *buf)
+   \                     SerialApp_ConnectReqProcess:
+    489          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 30
+   \   000005   74E2         MOV     A,#-0x1e
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+    490            uint16 nwkAddr;
+    491            char buff[30] = {0};
+   \   00000A   85..82       MOV     DPL,?XSP + 0
+   \   00000D   85..83       MOV     DPH,?XSP + 1
+   \   000010   AC82         MOV     R4,DPL
+   \   000012   AD83         MOV     R5,DPH
+   \   000014   7583..       MOV     DPH,#(`?<Constant {0}>_1` >> 8) & 0xff
+   \   000017   7582..       MOV     DPL,#`?<Constant {0}>_1` & 0xff
+   \   00001A   741E         MOV     A,#0x1e
+   \   00001C   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    492          #if ZDO_COORDINATOR
+    493          
+    494              SerialApp_TxAddr.addrMode = (afAddrMode_t)AddrBroadcast;
+    495            SerialApp_TxAddr.endPoint = SERIALAPP_ENDPOINT;
+    496            SerialApp_TxAddr.addr.shortAddr = 0xFFFF;
+    497            #else
+    498          
+    499            SerialApp_TxAddr.addrMode = (afAddrMode_t)Addr16Bit;
+   \   00001F   90....       MOV     DPTR,#SerialApp_TxAddr + 8
+   \   000022   7402         MOV     A,#0x2
+   \   000024   F0           MOVX    @DPTR,A
+    500            SerialApp_TxAddr.endPoint = SERIALAPP_ENDPOINT;
+   \   000025   A3           INC     DPTR
+   \   000026   740B         MOV     A,#0xb
+   \   000028   F0           MOVX    @DPTR,A
+    501            SerialApp_TxAddr.addr.shortAddr = BUILD_UINT16(buf[1], buf[0]);
+   \   000029   8A82         MOV     DPL,R2
+   \   00002B   8B83         MOV     DPH,R3
+   \   00002D   A3           INC     DPTR
+   \   00002E   E0           MOVX    A,@DPTR
+   \   00002F   FC           MOV     R4,A
+   \   000030   8A82         MOV     DPL,R2
+   \   000032   8B83         MOV     DPH,R3
+   \   000034   E0           MOVX    A,@DPTR
+   \   000035   F9           MOV     R1,A
+   \   000036   EC           MOV     A,R4
+   \   000037   90....       MOV     DPTR,#SerialApp_TxAddr
+   \   00003A   F0           MOVX    @DPTR,A
+   \   00003B   A3           INC     DPTR
+   \   00003C   E9           MOV     A,R1
+   \   00003D   F0           MOVX    @DPTR,A
+    502          
+    503          #endif
+    504          
+    505            nwkAddr = NLME_GetShortAddr();
+   \   00003E                ; Setup parameters for call to function NLME_GetShortAddr
+   \   00003E   12....       LCALL   ??NLME_GetShortAddr?relay
+   \   000041   8A..         MOV     ?V0 + 0,R2
+   \   000043   8B..         MOV     ?V0 + 1,R3
+    506            
+    507            sprintf(buff, "self:%d   child:%d\r\n", nwkAddr, SerialApp_TxAddr.addr.shortAddr);
+   \   000045                ; Setup parameters for call to function sprintf
+   \   000045   90....       MOV     DPTR,#SerialApp_TxAddr
+   \   000048   12....       LCALL   ?PUSH_XSTACK8_X_TWO
+   \   00004B   78..         MOV     R0,#?V0 + 0
+   \   00004D   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000050   7C..         MOV     R4,#`?<Constant "self:%d   child:%d\\r\\n">` & 0xff
+   \   000052   7D..         MOV     R5,#(`?<Constant "self:%d   child:%d\\r\\n">` >> 8) & 0xff
+   \   000054   7404         MOV     A,#0x4
+   \   000056   12....       LCALL   ?XSTACK_DISP0_8
+   \   000059   AA82         MOV     R2,DPL
+   \   00005B   AB83         MOV     R3,DPH
+   \   00005D   12....       LCALL   ??sprintf?relay
+   \   000060   7404         MOV     A,#0x4
+   \   000062   12....       LCALL   ?DEALLOC_XSTACK8
+    508            HalUARTWrite ( 0, (uint8*)buff, strlen(buff));
+   \   000065                ; Setup parameters for call to function HalUARTWrite
+   \   000065                ; Setup parameters for call to function strlen
+   \   000065   12....       LCALL   ?Subroutine5 & 0xFFFF
+    509            
+    510            buff[0] = HI_UINT16( nwkAddr );
+   \                     ??CrossCallReturnLabel_5:
+   \   000068   85..82       MOV     DPL,?XSP + 0
+   \   00006B   85..83       MOV     DPH,?XSP + 1
+   \   00006E   E5..         MOV     A,?V0 + 1
+   \   000070   F0           MOVX    @DPTR,A
+    511            buff[1] = LO_UINT16( nwkAddr );
+   \   000071   7401         MOV     A,#0x1
+   \   000073   12....       LCALL   ?XSTACK_DISP0_8
+   \   000076   E5..         MOV     A,?V0 + 0
+   \   000078   F0           MOVX    @DPTR,A
+    512            
+    513            if ( AF_DataRequest( &SerialApp_TxAddr, &SerialApp_epDesc,
+    514                                 SERIALAPP_CONNECTRSP_CLUSTER,
+    515                                 2,
+    516                                 (uint8*)buff,
+    517                                 &SerialApp_MsgID, 
+    518                                 0, 
+    519                                 AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+   \   000079                ; Setup parameters for call to function AF_DataRequest
+   \   000079   75..1E       MOV     ?V0 + 0,#0x1e
+   \   00007C   78..         MOV     R0,#?V0 + 0
+   \   00007E   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000081   75....       MOV     ?V0 + 0,#SerialApp_MsgID & 0xff
+   \   000084   75....       MOV     ?V0 + 1,#(SerialApp_MsgID >> 8) & 0xff
+   \   000087   78..         MOV     R0,#?V0 + 0
+   \   000089   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00008C   7403         MOV     A,#0x3
+   \   00008E   12....       LCALL   ?XSTACK_DISP0_8
+   \   000091   8582..       MOV     ?V0 + 0,DPL
+   \   000094   8583..       MOV     ?V0 + 1,DPH
+   \   000097   78..         MOV     R0,#?V0 + 0
+   \   000099   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00009C   75..02       MOV     ?V0 + 0,#0x2
+   \   00009F   75..00       MOV     ?V0 + 1,#0x0
+   \   0000A2   78..         MOV     R0,#?V0 + 0
+   \   0000A4   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000A7   75..04       MOV     ?V0 + 0,#0x4
+   \   0000AA   78..         MOV     R0,#?V0 + 0
+   \   0000AC   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000AF   12....       LCALL   ?Subroutine8 & 0xFFFF
+   \                     ??CrossCallReturnLabel_22:
+   \   0000B2   12....       LCALL   ?DEALLOC_XSTACK8
+    520            {
+    521            }
+    522            else
+    523            {
+    524              // Error occurred in request to send.
+    525            }
+    526            
+    527            HalLedSet(HAL_LED_2, HAL_LED_MODE_ON);
+   \   0000B5                ; Setup parameters for call to function HalLedSet
+   \   0000B5   12....       LCALL   ?Subroutine6 & 0xFFFF
+    528            HalUARTWrite ( 0, "< connect success>\n", 23);
+    529          }
+   \                     ??CrossCallReturnLabel_7:
+   \   0000B8   741E         MOV     A,#0x1e
+   \   0000BA   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000BD   02....       LJMP    ?Subroutine1 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   7A01         MOV     R2,#0x1
+   \   000002   7902         MOV     R1,#0x2
+   \   000004   12....       LCALL   ??HalLedSet?relay
+   \   000007                ; Setup parameters for call to function HalUARTWrite
+   \   000007                ; Setup parameters for call to function HalUARTWrite
+   \   000007   7C17         MOV     R4,#0x17
+   \   000009   7D00         MOV     R5,#0x0
+   \   00000B   7A..         MOV     R2,#`?<Constant "< connect success>\\n">` & 0xff
+   \   00000D   7B..         MOV     R3,#(`?<Constant "< connect success>\\n">` >> 8) & 0xff
+   \   00000F   7900         MOV     R1,#0x0
+   \   000011   12....       LCALL   ??HalUARTWrite?relay
+   \   000014   22           RET
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for SerialApp_epDesc>`:
+   \   000000   0B           DB 11
+   \   000001   ....         DW SerialApp_TaskID
+   \   000003   ....         DW SerialApp_SimpleDesc
+   \   000005   00           DB 0
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for AppTitle>`:
+   \   000000   414C4432     DB "ALD2530 DTU"
+   \            35333020
+   \            44545500
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SerialApp_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SerialApp_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SerialApp_ProcessEvent?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SerialApp_ProcessEvent
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SerialApp_ProcessMSGCmd?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SerialApp_ProcessMSGCmd
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SerialApp_Send?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SerialApp_Send
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SerialApp_CallBack?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SerialApp_CallBack
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SerialApp_DeviceConnect?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SerialApp_DeviceConnect
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SerialApp_ConnectReqProcess?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SerialApp_ConnectReqProcess
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "SerialApp">`:
+   \   000000   53657269     DB "SerialApp"
+   \            616C4170
+   \            7000    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant {0}>`:
+   \   000000   00           DB 0
+   \   000001   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000009   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000011   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000019   00000000     DB 0, 0, 0, 0, 0
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "parent:%d   self:%d\\r\\n">`:
+   \   000000   70617265     DB "parent:%d   self:%d\015\012"
+   \            6E743A25
+   \            64202020
+   \            73656C66
+   \            3A25640D
+   \            0A00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "< connect success>\\n">`:
+   \   000000   3C20636F     DB "< connect success>\012"
+   \            6E6E6563
+   \            74207375
+   \            63636573
+   \            733E0A00
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant {0}>_1`:
+   \   000000   00           DB 0
+   \   000001   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000009   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000011   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000019   00000000     DB 0, 0, 0, 0, 0
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "self:%d   child:%d\\r\\n">`:
+   \   000000   73656C66     DB "self:%d   child:%d\015\012"
+   \            3A256420
+   \            20206368
+   \            696C643A
+   \            25640D0A
+   \            00      
+
+   Maximum stack usage in bytes:
+
+     Function                       ISTACK PSTACK XSTACK
+     --------                       ------ ------ ------
+     SerialApp_CallBack                 0      0      9
+       -> SerialApp_Send                0      0     18
+     SerialApp_ConnectReqProcess        2      0     63
+       -> NLME_GetShortAddr             0      0     84
+       -> sprintf                       0      0     92
+       -> strlen                        0      0     84
+       -> HalUARTWrite                  0      0     84
+       -> AF_DataRequest                0      0    102
+       -> HalLedSet                     0      0     84
+       -> HalUARTWrite                  0      0     84
+     SerialApp_DeviceConnect            2      0     65
+       -> HalLedBlink                   0      0     88
+       -> NLME_GetShortAddr             0      0     88
+       -> NLME_GetCoordShortAddr        0      0     88
+       -> sprintf                       0      0     96
+       -> strlen                        0      0     88
+       -> HalUARTWrite                  0      0     88
+       -> AF_DataRequest                0      0    106
+     SerialApp_Init                     0      0     38
+       -> afRegister                    0      0     76
+       -> RegisterForKeys               0      0     76
+       -> HalUARTOpen                   0      0     76
+       -> HalLcdWriteString             0      0     76
+       -> ZDO_RegisterForZDOMsg         0      0     76
+       -> ZDO_RegisterForZDOMsg         0      0     76
+     SerialApp_ProcessEvent             0      0     21
+       -> SerialApp_Send                0      0     24
+       -> HalLedSet                     0      0     24
+       -> SerialApp_DeviceConnect       0      0     24
+       -> osal_msg_deallocate           0      0     24
+       -> osal_msg_receive              0      0     24
+       -> SerialApp_ProcessMSGCmd       0      0     24
+       -> AF_DataRequest                0      0     42
+       -> osal_set_event                0      0     24
+     SerialApp_ProcessMSGCmd            0      0     27
+       -> osal_memcpy                   0      0     30
+       -> HalUARTWrite                  0      0     24
+       -> osal_set_event                0      0     24
+       -> osal_stop_timerEx             0      0     24
+       -> osal_stop_timerEx             0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> SerialApp_ConnectReqProcess
+                                        0      0     24
+       -> HalLedSet                     0      0     24
+       -> HalUARTWrite                  0      0     24
+     SerialApp_Send                     0      0     31
+       -> HalUARTRead                   0      0     20
+       -> AF_DataRequest                0      0     38
+       -> osal_set_event                0      0     20
+
+
+   Segment part sizes:
+
+     Function/Label                        Bytes
+     --------------                        -----
+     SerialApp_ClusterList                    8
+     SerialApp_SimpleDesc                    12
+     SerialApp_epDesc                         6
+     SampleApp_NwkState                       1
+     SerialApp_TaskID                         1
+     AppTitle                                12
+     SerialApp_MsgID                          1
+     SerialApp_TxAddr                        12
+     SerialApp_TxSeq                          1
+     SerialApp_TxBuf                         81
+     SerialApp_TxLen                          1
+     SerialApp_RxAddr                        12
+     SerialApp_RxSeq                          1
+     SerialApp_RspBuf                         4
+     SerialApp_Init                         176
+     ?Subroutine0                             5
+     SerialApp_ProcessEvent                 208
+     ?Subroutine1                             5
+     ??Subroutine12_0                         9
+     SerialApp_ProcessMSGCmd                315
+     ?Subroutine7                             5
+     ?Subroutine10                            4
+     ?Subroutine11                           11
+     ?Subroutine3                             5
+     ?Subroutine2                             5
+     ?Subroutine9                            12
+     ?Subroutine4                             2
+     SerialApp_Send                         119
+     ?Subroutine8                            10
+     ??Subroutine13_0                         6
+     SerialApp_CallBack                      24
+     SerialApp_DeviceConnect                198
+     ?Subroutine5                            33
+     SerialApp_ConnectReqProcess            192
+     ?Subroutine6                            21
+     ?<Initializer for SerialApp_epDesc>      6
+     ?<Initializer for AppTitle>             12
+     ??SerialApp_Init?relay                   6
+     ??SerialApp_ProcessEvent?relay           6
+     ??SerialApp_ProcessMSGCmd?relay          6
+     ??SerialApp_Send?relay                   6
+     ??SerialApp_CallBack?relay               6
+     ??SerialApp_DeviceConnect?relay          6
+     ??SerialApp_ConnectReqProcess?relay      6
+     ?<Constant "SerialApp">                 10
+     ?<Constant {0}>                         30
+     ?<Constant "parent:%d   self:%d\r\n">   22
+     ?<Constant "< connect success>\n">      20
+     ?<Constant {0}>_1                       30
+     ?<Constant "self:%d   child:%d\r\n">    21
+
+ 
+ 1 365 bytes in segment BANKED_CODE
+    42 bytes in segment BANK_RELAYS
+    18 bytes in segment XDATA_I
+    18 bytes in segment XDATA_ID
+   153 bytes in segment XDATA_ROM_C
+   115 bytes in segment XDATA_Z
+ 
+ 1 425 bytes of CODE  memory
+   153 bytes of CONST memory
+   133 bytes of XDATA memory
+
+Errors: none
+Warnings: none
